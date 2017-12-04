@@ -146,11 +146,11 @@ $(document).ready(function () {
             var scroll = $(window).scrollTop();
         
             if (scroll >= 300) {
-                header.addClass("short-nav");
+                /*header.addClass("short-nav");*/
                 secodheader.addClass("short-nav-second");
                 
             } else {
-                header.removeClass("short-nav");
+                /*header.removeClass("short-nav");*/
                 secodheader.removeClass("short-nav-second");
             }
         });

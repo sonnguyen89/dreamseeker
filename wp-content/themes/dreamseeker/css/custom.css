@@ -1,4 +1,14 @@
-.range-results .results-items{ 
+.logo {
+    margin:0;
+    width: 191px;
+    height: 91px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    max-width: 100%;
+    padding:0;
+    background-size: 180px;
+}
+.range-results .results-items{
     border-right:0 !important;
 } 
 .search-icon.dropdown span{
