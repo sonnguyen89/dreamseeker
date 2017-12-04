@@ -1,0 +1,93 @@
+#fancybox-thumbs {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 8050;
+}
+
+#fancybox-thumbs.bottom {
+	bottom: 2px;
+}
+
+#fancybox-thumbs.top {
+	top: 2px;
+}
+
+#fancybox-thumbs ul {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+        margin-top:10px!important;
+}
+
+#fancybox-thumbs ul li {
+	float: left;
+	padding: 1px;
+	opacity: 0.5;
+}
+
+#fancybox-thumbs ul li.active {
+	opacity: 0.75;
+	padding: 0;
+	border: 1px solid #fff;
+}
+
+#fancybox-thumbs ul li:hover {
+	opacity: 1;
+}
+
+#fancybox-thumbs ul li a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #222;
+	background: #111;
+	outline: none;
+}
+
+#fancybox-thumbs ul li img {
+	display: block;
+	position: relative;
+	border: 0;
+	padding: 0;
+	max-width: none;
+}
+#fancybox-thumbs {
+    bottom: 0;
+    height: 115px;
+    left: 0;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 99999999;
+    padding: 0 25px;
+}
+#fancybox-thumbs ul {
+    float: left;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    left:0!important;
+    /*width:auto!important;*/
+    /*width:100%!important;*/
+}
+.right_click{
+    background: #000 url("../img/next1.png") no-repeat scroll center center / 100% auto;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    z-index: 9999999;
+    cursor:pointer;
+}
+.left_click{
+    width:30px;
+    height:100%;
+    background:#000 url('../img/prev1.png')no-repeat scroll center center / 100% auto;
+    position: absolute;
+    left:0;
+    z-index:9999999;
+    cursor:pointer;
+}

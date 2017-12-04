@@ -1,0 +1,22 @@
+
+@media print {
+body { background:#fff; color:#000!important; margin:0 }
+
+#dvPanel2.search-results ul{
+    overflow:visible;
+    float:Left;
+    width:100%;
+}
+.steps-list{
+    overflow:visible;
+    float:Left;
+    width:100%;
+}
+.adp, .adp-directions td, .adp-directions td span, .adp-directions b, .adp-directions p{
+     color:#000!important;
+}
+
+.adp-legal{
+    display:none!important;
+}
+}
