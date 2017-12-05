@@ -19,6 +19,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110544191-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-110544191-1');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics ending -->
     </head>
     <body>
         <?php
