@@ -29,7 +29,7 @@
 
             gtag('config', 'UA-110544191-1');
         </script>
-        <!-- Global site tag (gtag.js) - Google Analytics ending -->
+
     </head>
     <body>
         <?php
