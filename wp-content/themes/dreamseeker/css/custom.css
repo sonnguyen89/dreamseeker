@@ -1991,6 +1991,10 @@ background: rgba(0,0,0,0.5);
 }
 
 
+.product-layout#layout .layout_images.tab-content{
+    background: none;
+}
+
 /*jhgh*/
 
 
