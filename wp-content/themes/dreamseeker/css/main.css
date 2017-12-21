@@ -2568,7 +2568,7 @@ footer .certified .certified-logo {
     /*    background-size: 72px 72px !important;*/
 }
 .fancybox-next span {
-    background: url("../img/right_arrow.png") no-repeat scroll 0 0;
+    background: url("../img/right_arrow.png") no-repeat scroll 0 0 !important;
     background-size: 100%;
     /*    opacity: 0.7;*/
     right: 10px;
