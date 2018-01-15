@@ -4009,7 +4009,6 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     height: 100%;
     position: relative;
 }
-
 /* home page slider text */
 @media (max-width: 520px) {
     .ls-slide h5 {
@@ -4138,5 +4137,35 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 @media (max-width: 450px) {
     .ls-l > p {
         padding: 6.92308px 19.2308px 4.923px;
+    }
+}
+
+.sta-inclu-heading-line, .opt-inclu-heading-line, .not-inclu-heading-line
+{
+    padding-right: 24px;
+}
+
+.empty_field_header_specs{
+    width:65%;
+}
+
+@media(max-width:650px)
+{
+    .empty_field_header_specs
+    {
+        width:25%;
+    }
+    .panel-default>.panel-heading+.panel-collapse>.panel-body
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media(max-width:750px)
+{
+    .sta-inclu-heading-line::before, .opt-inclu-heading-line::before, .not-inclu-heading-line::before
+    {
+        content: "\A";
+        white-space: pre;
     }
 }
