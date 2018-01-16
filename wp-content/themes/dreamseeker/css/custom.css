@@ -4100,7 +4100,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
         top: 165px !important;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .ls-slide > a > p {
         line-height: 0 !important;
         padding-bottom: 8px !important;
