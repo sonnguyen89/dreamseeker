@@ -4176,3 +4176,23 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
         width:95%;
     }
 }
+
+.product-img-inner .badge-img{
+    position: absolute;
+    top: 150px;
+    right: 30px;
+    width: 226px;
+    height: 226px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.featured-products .row .badge-img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 104px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

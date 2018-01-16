@@ -64,7 +64,12 @@ global $post;
                                 <span>
                                     <?php
                                     echo "<img class='img-responsive' src='" . get_template_directory_uri() . "/timthumb.php?src=" . $product_image[0] . "&a=t&w=500&h=300&zc=1' alt=''>";
-                                    ?> 
+                                    ?>
+
+                                    <?php $badge_img = get_field('badge_image',$v_id); ?>
+                                    <?php if(!empty($badge_img)): ?>
+                                        <div class="badge-img" style="background-image:url('<?php echo $badge_img['url'] ?>')"></div>
+                                    <?php endif; ?>
                                 </span>
                                 <span class="feature_desc_wrpper">
                                     <h4><?php echo $product_title; ?></h4>
