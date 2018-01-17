@@ -2759,7 +2759,7 @@ background: rgba(0,0,0,0.5);
         width: 22.9%;
     }
 } 
-@media(max-width:768px){
+@media(max-width:767px){
     .upcoming_tb_right_iner{
         margin-top:20px;
     }
@@ -2874,7 +2874,7 @@ background: rgba(0,0,0,0.5);
     }
     .feature_desc_wrpper{
         min-height:100%;
-    } 
+    }
     .f-product-items .des.EqHeightDiv2{
         height:auto!important;
     }
@@ -2926,7 +2926,7 @@ background: rgba(0,0,0,0.5);
     nav #navbar-secondary{
         display:block!important;
         border:none!important;
-        min-height:38px!important;   
+        min-height:38px!important;
     }
     nav #navbar-secondary a{
         padding:10px 15px!important;
@@ -2971,7 +2971,7 @@ background: rgba(0,0,0,0.5);
     }
     .second-navbar #navbar.navbar-second ul li{
         float:left;
-        width:auto;    
+        width:auto;
     }
     #scroll_here .container {
         max-width: 290px;
@@ -2995,7 +2995,7 @@ background: rgba(0,0,0,0.5);
     }
     .product-video .col-md-5 {
         float: left;
-        padding-right: 0 !important; 
+        padding-right: 0 !important;
         width: 100%;
         padding:20px 15px!important;
     }
