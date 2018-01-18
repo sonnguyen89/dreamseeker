@@ -4196,3 +4196,8 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+@media(max-width:450px)
+{
+    .product-img-inner .badge-img{width: 150px;height: 150px;}
+}
