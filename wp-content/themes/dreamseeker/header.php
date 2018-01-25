@@ -68,12 +68,9 @@
 //            var link_blog = JSON.parse('<?php // echo json_encode($link_blog); ?>');
 
             jQuery(document).ready(function() {
-                jQuery('#menu-menu-1').last().after().append('<li class="visible-xs"><a href="#">Find a Dealer</a></li><li class="visible-xs"><a href="#">Contact Us</a></li>\n\
-                   <li class="search-icon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>');
-       //            jQuery('#menu-menu-1').last().after().append('<li class="visible-xs"><a href="#">Find a Dealer</a></li><li class="visible-xs"><a href="#">Contact Us</a></li><li class="search-icon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>');
+
                 jQuery('#menu-menu-1').find('.sub-menu').addClass('dropdown-menu');
                 jQuery('#menu-menu-1').find('li').addClass('dropdown');
-                // jQuery('#menu-menu-1').find('.menu-item-has-children a:first').attr( "data-toggle", "dropdown" );
 
                 jQuery('#menu-menu-1 .menu-item-has-children').each(function() {
                     jQuery(this).find('a:first').attr("data-toggle", "dropdown");
@@ -109,21 +106,8 @@
 
                 jQuery('.serch_close_sec').click(function() {
                     jQuery('.search_inpu').slideUp();
-//                    jQuery('.search_inpu').css('display', 'none');
+
                 });
-//                var availableTags = JSON.parse('<?php // echo json_encode($titl); ?>');
-//                jQuery("#tags").autocomplete({
-//                    source: availableTags,
-//                    change: function(e, u) {
-//                        if (typeof link_blog[u.item.value] != 'undefined') {
-//                            window.location.href = link_blog[u.item.value];
-//                        }
-//                    }
-//                }).on('focus', function(event) {
-//                    jQuery(this).autocomplete("search", "fla");
-//                });
-//                var txt_cp = jQuery('#tags').val();
-//                jQuery('.ui-autocomplete').insertAfter('#tags');
             });
         </script>
 
@@ -135,9 +119,10 @@
 
 
         <nav class="navbar navbar-inverse navbar-top navbar-fixed-top" role="navigation">
-            <div class="container-fluid" style="">
-                <div class="col-md-12" style="">
-                    <div class="navbar-header col-md-2" style="">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="navbar-header col-md-12">
+                        <div class="navbar-header-content navbar-center">
                         <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
@@ -146,75 +131,28 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="logo_brnd"><a class="navbar-brand logo text-hide" href="<?php bloginfo('url'); ?>">Dream Seeker</a></div>
-                    </div>
-                    <div class="second_main_navbar col-md-10" style="padding:0px;">
-                        <div id="navbar-secondary" class="hidden-xs navbar-collapse navbar-secondary " style="float:left;width:100%;margin-top: -5px;">
-                            <?php
+
+                        <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'header-top-menu',
                                 'menu_class' => 'top-menu-bar nav navbar-nav navbar-right'
                             ));
                             ?>
                         </div>
-                        <div id="navbar" class="navbar-collapse collapse navbar-primary" style="float:left;width:100%; margin-top:15px;">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="navbar" class="main-navigation collapse navbar-collapse">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'header-menu',
-                                'menu_class' => 'nav navbar-nav navbar-right'
+                                'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
                             ));
                             ?>
-                            <div class="search_inpu">
-                                <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
-                                    <div class="ui-widget auto_fill_p">
-                                        <i class="mk-icon-search fullscreen-search-icon"> <input type="submit" id="searchsubmit" style=""  value="Search"  class="search_btn"/></i>
-                                        <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="Search Here"  autocomplete="off" />
-                                        <!--<input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="Search Here"/>-->
-                                        <ul style="display:block;" id="result_sc"></ul>
-                                    </div>
-                                </form>
-                                <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/ser_close.png"/></span>
-                            </div>
-
-                            <!--            <div class="search_inpu">
-                                        <form role="search" method="get" id="searchform" class="searc" action="<?php // echo home_url('/');  ?>">
-                                                            <div class="ui-widget">
-                                                                <i class="mk-icon-search fullscreen-search-icon"> <input type="submit" id="searchsubmit" style="color:#000;"  value="Search"  class="search_btn"/></i>
-                                                                <input id="tags" type="text" style="color:#000;" class="search_input"  value="" name="s"   placeholder="Search Here"/>
-                                                            </div>
-                                                            </form>
-                                    </div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-
-        <!--    <nav class="navbar navbar-inverse navbar-top navbar-fixed-top" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand logo text-hide" href="<?php // bloginfo('url'); ?>">Dream Seeker</a>
-                </div>
-                <div id="navbar-secondary" class="hidden-xs navbar-collapse navbar-secondary ">
-<?php
-// wp_nav_menu(array(
-//                        'theme_location' => 'header-top-menu',
-//                        'menu_class'      => 'top-menu-bar nav navbar-nav navbar-right'
-//         )); 
-?>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse navbar-primary">
-<?php
-// wp_nav_menu(array(
-//               'theme_location' => 'header-menu',
-//               'menu_class'      => 'nav navbar-nav navbar-right'
-//          )); 
-?>
-                </div>
-              </div>
-            </nav>-->
