@@ -123,13 +123,7 @@
                 <div class="row">
                     <div class="navbar-header col-md-12">
                         <div class="navbar-header-content navbar-center">
-                        <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+
                         <div class="logo_brnd"><a class="navbar-brand logo text-hide" href="<?php bloginfo('url'); ?>">Dream Seeker</a></div>
 
                         <?php
@@ -139,11 +133,23 @@
                             ));
                             ?>
                         </div>
+
+
+
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
+
+                        <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
                         <div id="navbar" class="main-navigation collapse navbar-collapse">
                             <?php
                             wp_nav_menu(array(
