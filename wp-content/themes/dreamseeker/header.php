@@ -112,13 +112,17 @@
                     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
                 });
 
+
+                //these functions respond for  animation and style for seach at desktop theme
                 $('.serch_close_sec').click(function()
                 {
-                    $(".search-icon").show();
+
 
                     $('#navbar.main-navigation form.searc').animate({
                         width: "0",
-                    }, 500 );
+                    }, 500, function(){
+                        $(".search-icon").show();
+                    });
                     $('.search_inpu').css('overflow', 'hidden');
                     $('input.search_input').val('');
                     $('#result_sc').html('');
@@ -128,22 +132,40 @@
                 {
                     event.stopPropagation();
                     $('.search-icon').hide();
-                    $('#navbar.main-navigation form.searc').animate({
-                        width: "550px",
-                    }, 500 );
 
-
+                    //set the search form position before doing animation
                     var search_input_right_pos = 0;
-                    if((($(window).width() - $('#navbar.main-navigation > div').outerWidth() )/2) > 0 )
+                    var search_width = 550;
+                    if($(window).width() < 1450 )
                     {
-                        search_input_right_pos = ($(window).width() - $('#navbar.main-navigation > div').outerWidth())/2;
+                        search_width = $(window).width();
+                        $('.search_input').css({width : '90%'})
                     }
-
+                    else
+                    {
+                        $('.search_input').css({width : ''})
+                        if((($(window).width() - $('#navbar.main-navigation > div').outerWidth() )/2) > 0 )
+                        {
+                            search_input_right_pos = ($(window).width() - $('#navbar.main-navigation > div').outerWidth())/2;
+                        }
+                    }
+                    if($(window).width() < 1000 )
+                    {
+                        $('.search_input').css({width : '80%'})
+                    }
                     $('.search_inpu').css({
                         overflow: 'visible',
                         right : search_input_right_pos
                     });
 
+                    $('#navbar.main-navigation form.searc').animate({
+                        width: search_width,
+                    },
+                        500,
+                        function(){
+                            $('input.search_input').focus();
+                        }
+                    );
                 });
             });
         </script>
