@@ -114,25 +114,35 @@
 
                 $('.serch_close_sec').click(function()
                 {
-
-
                     $(".search-icon").show();
 
                     $('#navbar.main-navigation form.searc').animate({
                         width: "0",
                     }, 500 );
                     $('.search_inpu').css('overflow', 'hidden');
-                    $('input.search_input').value('');
+                    $('input.search_input').val('');
+                    $('#result_sc').html('');
 
                 });
-                $(".search-icon").live('click', function(e) {
-
-                    $(".search-icon").hide();
-
+                $(".search-icon").live('click', function()
+                {
+                    event.stopPropagation();
+                    $('.search-icon').hide();
                     $('#navbar.main-navigation form.searc').animate({
-                        width: "644px",
+                        width: "550px",
                     }, 500 );
-                    $('.search_inpu').css('overflow', 'visible');
+
+
+                    var search_input_right_pos = 0;
+                    if((($(window).width() - $('#navbar.main-navigation > div').outerWidth() )/2) > 0 )
+                    {
+                        search_input_right_pos = ($(window).width() - $('#navbar.main-navigation > div').outerWidth())/2;
+                    }
+
+                    $('.search_inpu').css({
+                        overflow: 'visible',
+                        right : search_input_right_pos
+                    });
 
                 });
             });
@@ -160,9 +170,6 @@
                             ));
                             ?>
                         </div>
-
-
-
                     </div>
                 </div>
 
@@ -188,7 +195,6 @@
                             <div class="search_inpu">
                                 <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
                                     <div class="ui-widget auto_fill_p">
-                                        <!--<input type="submit" id="searchsubmit" style=""  value="Search"  class="search_btn"/>-->
                                         <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                         <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
                                         <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>

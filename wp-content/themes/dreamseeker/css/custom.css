@@ -268,8 +268,14 @@ body.modal-open {
     margin: 0;
     right: 0;
     border-top: 0px;
-    margin-right: 220px;
+    margin-right: 0;
     overflow: hidden;
+}
+@media(max-width:2000px)
+{
+    #navbar.main-navigation .search_inpu {
+        margin-right: 0;
+    }
 }
 #navbar.main-navigation form.searc
 {
@@ -334,7 +340,7 @@ footer .second-section .footer_main_continer .line-a, footer .second-section .fo
 .search_input {
     float: left;
     height: 40px;
-    width: 83%;
+    width: 79%;
     border: 0px;
     border-radius: 0px;
     -moz-border-radius: 0px;
