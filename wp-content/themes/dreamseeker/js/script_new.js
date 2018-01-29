@@ -824,36 +824,6 @@ jQuery(document).ready(function() {
 
 
 
-
-
-
-
-    //    });   
-
-
-
-    jQuery(".search-icon").live('click', function(e) {
-
-        e.preventDefault();
-
-        //        jQuery('.search_big.mk-fullscreen-search-overlay').fadeIn();
-
-        jQuery('.search_inpu').slideDown();
-
-    //        jQuery('.search_inpu').fadeToggle();
-
-
-
-    });
-
-    //    jQuery(".mk-fullscreen-close").live('click', function() {
-
-    //        jQuery('.search_inpu').fadeOut();
-
-    //    });
-
-
-
     jQuery('.range-disoption .colicon').click(function() {
 
         jQuery(".current").removeClass("current");

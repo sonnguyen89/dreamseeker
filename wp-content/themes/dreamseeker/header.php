@@ -67,45 +67,72 @@
         <script>
 //            var link_blog = JSON.parse('<?php // echo json_encode($link_blog); ?>');
 
-            jQuery(document).ready(function() {
+            jQuery(document).ready(function($) {
 
-                jQuery('#menu-menu-1').find('.sub-menu').addClass('dropdown-menu');
-                jQuery('#menu-menu-1').find('li').addClass('dropdown');
 
-                jQuery('#menu-menu-1 .menu-item-has-children').each(function() {
+                $('#navbar ul.main-navbar-content')
+                    .last()
+                    .after()
+                    .append('<li class="visible-xs"><a href="#">Find a Dealer</a></li>\
+                              <li class="visible-xs"><a href="#">Contact Us</a></li>\n\
+                               <li class="search-icon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>'
+                    );
+                $('#navbar ul.main-navbar-content').find('.sub-menu').addClass('dropdown-menu');
+                $('#navbar ul.main-navbar-content').find('li').addClass('dropdown');
+
+                $('#navbar ul.main-navbar-content .menu-item-has-children').each(function() {
                     jQuery(this).find('a:first').attr("data-toggle", "dropdown");
                     jQuery(this).find('a:first').append('<span class="caret"></span>');
                 });
-                jQuery('.top-menu-bar li a').append(' <i class="fa fa-angle-right"></i>');
+                $('.top-menu-bar li a').append(' <i class="fa fa-angle-right"></i>');
 
-                jQuery('.footer-navbar-nav .menu-item-has-children').each(function() {
-                    jQuery(this).addClass('col-md-2 col-sm-4 col-xs-6');
-                    jQuery(this).find('a:first').css({"font-size": "14px", "text-decoration": "none", "font-family": '"AvenirNextBold",sans-serif'});
-                    jQuery(this).find('a:first').removeAttr("href");
-                    jQuery(this).find('.sub-menu').css({"margin-top": "5px"});
+                $('.footer-navbar-nav .menu-item-has-children').each(function() {
+                    $(this).addClass('col-md-2 col-sm-4 col-xs-6');
+                    $(this).find('a:first').css({"font-size": "14px", "text-decoration": "none", "font-family": '"AvenirNextBold",sans-serif'});
+                    $(this).find('a:first').removeAttr("href");
+                    $(this).find('.sub-menu').css({"margin-top": "5px"});
 
                 });
-                jQuery('#menu-item-82').removeClass('col-md-2');
-                jQuery('#menu-item-82').addClass('col-md-3');
+                $('#menu-item-82').removeClass('col-md-2');
+                $('#menu-item-82').addClass('col-md-3');
 
-                jQuery('.menu-item-object-products_category').click(function(e) {
+                $('.menu-item-object-products_category').click(function(e) {
                     e.preventDefault();
-                    var str = jQuery(this).find("a").attr('href');
+                    var str = $(this).find("a").attr('href');
                     var res_link = str.split("products_category");
                     var str = res_link[1];
                     window.location.replace(res_link[0] + 'off-road/#' + res_link[1].replace("/", ""));
-                    jQuery('.product_category').val(jQuery(this).find("a").text())
-                    jQuery('.product_category').trigger('change')
-                    jQuery("html, body").animate({scrollTop: jQuery("#scroll_here").offset().top}, 1000);
+                    $('.product_category').val($(this).find("a").text())
+                    $('.product_category').trigger('change')
+                    $("html, body").animate({scrollTop: $("#scroll_here").offset().top}, 1000);
                 });
-                jQuery('#menu-menu-1.nav li.dropdown').hover(function() {
-                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+                $('#navbar ul.main-navbar-content li.dropdown').hover(function() {
+                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
                 }, function() {
-                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
                 });
 
-                jQuery('.serch_close_sec').click(function() {
-                    jQuery('.search_inpu').slideUp();
+                $('.serch_close_sec').click(function()
+                {
+
+
+                    $(".search-icon").show();
+
+                    $('#navbar.main-navigation form.searc').animate({
+                        width: "0",
+                    }, 500 );
+                    $('.search_inpu').css('overflow', 'hidden');
+                    $('input.search_input').value('');
+
+                });
+                $(".search-icon").live('click', function(e) {
+
+                    $(".search-icon").hide();
+
+                    $('#navbar.main-navigation form.searc').animate({
+                        width: "644px",
+                    }, 500 );
+                    $('.search_inpu').css('overflow', 'visible');
 
                 });
             });
@@ -157,6 +184,19 @@
                                 'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
                             ));
                             ?>
+
+                            <div class="search_inpu">
+                                <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
+                                    <div class="ui-widget auto_fill_p">
+                                        <!--<input type="submit" id="searchsubmit" style=""  value="Search"  class="search_btn"/>-->
+                                        <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
+                                        <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
+                                        <ul style="display:block;" id="result_sc"></ul>
+                                    </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
                 </div>
