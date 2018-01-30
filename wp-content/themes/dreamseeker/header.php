@@ -114,18 +114,18 @@
 
 
                 //these functions respond for  animation and style for seach at desktop theme
-                $('.serch_close_sec').click(function()
+                $('.main-navigation .serch_close_sec').click(function()
                 {
 
 
                     $('#navbar.main-navigation form.searc').animate({
                         width: "0",
                     }, 500, function(){
-                        $(".search-icon").show();
+                        $(".main-navigation .search-icon").show();
                     });
-                    $('.search_inpu').css('overflow', 'hidden');
-                    $('input.search_input').val('');
-                    $('#result_sc').html('');
+                    $('.main-navigation .search_inpu').css('overflow', 'hidden');
+                    $('.main-navigation input.search_input').val('');
+                    $('.main-navigation #result_sc').html('');
 
                 });
                 $(".search-icon").live('click', function()
@@ -139,7 +139,7 @@
                     if($(window).width() < 1450 )
                     {
                         search_width = $(window).width();
-                        $('.search_input').css({width : '90%'})
+                        $('.search_input').css({width : '89%'})
                     }
                     else
                     {
@@ -171,12 +171,51 @@
 
 
                 //these functions respond for  animation and style for seach at Mobile theme
-                var wn_wdth = jQuery(window).width();
-                if(wn_wdth < 768)
+
+                $('.mobile_search_inpu .serch_close_sec').click(function()
                 {
 
-                }
+                    $('.mobile_search_inpu input.search_input').animate({
+                        width: "",
+                    }, 300, function(){
+                        $('.mobile_search_inpu').css('display','');
+                        $(".search_icon_mobile > a").show();
+                    });
+                    $('.mobile_search_inpu').css('overflow', 'hidden');
+                    $('.mobile_search_inpu input.search_input').val('');
+                    $('.mobile_search_inpu #result_sc').html('');
 
+                });
+
+
+                $(".search_icon_mobile > a").live('click', function()
+                {
+                    event.stopPropagation();
+                    $('.search_icon_mobile > a').hide();
+                    $('.mobile_search_inpu').show();
+
+                    if($(window).width() < 450 )
+                    {
+
+                        $('.mobile_search_inpu input.search_input').css('width','45%')
+                        $('.mobile_search_inpu input.search_input').focus();
+                    }
+                    else
+                    {
+                        var mobi_search_width = $(window).width() - 250;
+
+
+                        $('.mobile_search_inpu input.search_input').animate({
+                                width: mobi_search_width,
+                            },
+                            300,
+                            function(){
+                                $('.mobile_search_inpu input.search_input').focus();
+                            }
+                        );
+                    }
+
+                });
 
             });
         </script>
@@ -209,7 +248,18 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
+                        <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a>
+                            <div class="mobile_search_inpu">
+                                <form role="search" method="get" id="mobi_searchform" class="searc" action="<?php echo home_url('/'); ?>">
+                                    <div class="ui-widget auto_fill_p">
+                                        <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
+                                        <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
+                                        <ul style="display:block;" id="result_sc"></ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </span>
 
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
