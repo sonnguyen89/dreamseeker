@@ -167,6 +167,17 @@
                         }
                     );
                 });
+
+
+
+                //these functions respond for  animation and style for seach at Mobile theme
+                var wn_wdth = jQuery(window).width();
+                if(wn_wdth < 768)
+                {
+
+                }
+
+
             });
         </script>
 
@@ -199,6 +210,7 @@
                     <div class="col-md-12">
 
                         <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
+
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
