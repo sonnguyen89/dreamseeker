@@ -638,11 +638,9 @@ a.ftc{
 #menu-menu-1 .current-menu-item.current_page_item,
 #menu-menu-1 .current-menu-item.current_page_item a {
     background:#fff none repeat scroll 0 0;
-    color:#7d7d7d;
 }
 #menu-sub-menu-warranty .current-menu-item.current_page_item a{
     background:#fff none repeat scroll 0 0;
-    color:#7d7d7d;
 }
 .caret{
     margin-left: 8px;
@@ -1775,6 +1773,12 @@ footer .firs-section .icon-ig:hover{
     max-height: 50px;
 
 }
+#menu-menu-1.nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu
+{
+    border: 1px solid rgba(0,0,0,.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+
+}
 #menu-menu-1.nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu li,
 #menu-menu-1.nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu li a,
 #menu-menu-1.nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu{
@@ -2741,7 +2745,7 @@ background: rgba(0,0,0,0.5);
         width: 23.1%;
     }
     .main-navigation  #menu-menu-1 > li > a{
-        font-size:10px;
+        font-size:16px;
     }
     .navbar-second .navbar-nav > li > a {
         padding: 15px 10px;
@@ -2856,8 +2860,6 @@ background: rgba(0,0,0,0.5);
     }
     #navbar{
         width:100%;
-        overflow:visible;
-        /*overflow: hidden;*/
     }
     #navbar ul{
         margin-left:0;
@@ -2867,17 +2869,17 @@ background: rgba(0,0,0,0.5);
         border:none;
     }
     #navbar li, #navbar  div, #navbar ul, #menu-menu-1.nav.navbar-nav.navbar-center li{
-        float:left;
-        width:100%;
+        float: left;
+        width: 100%;
+        padding: 0px 15px;
     }
-    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
-        /*max-height: 100%;*/
-        /*overflow-y:no-display;*/
+    #navbar .nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu{
+        border: none;
+        box-shadow: none;
     }
     #navbar {
         float: left !important;
         margin-top: 0 !important;
-        /*margin-top: 17px !important;*/
         width: 100% !important;
     }
     .navbar.navbar-inverse.navbar-top.navbar-fixed-top{
@@ -2951,7 +2953,10 @@ background: rgba(0,0,0,0.5);
     .search_input{
         width:100%;
     }
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #navbar ul.navbar-nav li.search-icon{
+        display:none;
+    }
+    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon a{
         height:auto;
         max-height:100%;
     }

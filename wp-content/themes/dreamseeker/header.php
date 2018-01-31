@@ -268,7 +268,7 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <div id="navbar" class="main-navigation collapse navbar-collapse">
+                        <div id="navbar" class="main-navigation navbar-collapse collapse">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'header-menu',
