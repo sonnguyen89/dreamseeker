@@ -1529,6 +1529,21 @@ footer .firs-section .icon-fb:hover{
 {
     background: #fff;
 }
+
+.main-navigation .navbar-nav > li:hover > a:before
+{
+    background: url(../img/flyout-chip.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 14px;
+    position: absolute;
+    top: 40px;
+    width: 24px;
+    left: 31%;
+    right: 49%;
+}
 footer .firs-section .icon-tw:hover{
     background-position: 257px 102px;
 }
@@ -1768,7 +1783,7 @@ footer .firs-section .icon-ig:hover{
     border-right:none !important;
 }
 #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
-    width:10%;
+    width: auto;
     float: left;
     max-height: 50px;
 
@@ -1807,7 +1822,34 @@ footer .firs-section .icon-ig:hover{
     font-size:16px;
     text-align: left;
     text-transform: uppercase;
+    font-weight: bold;
+    z-index: 15;
 }
+.main-navigation .navbar-nav > li > div.menu-item-dropdown
+{
+    background-color: #fff;
+    padding: 0 10px;
+    position: fixed;
+    left: 50%;
+    border-top: 1px solid #d9d9d9;
+    box-shadow: 0 3px 5px 1px hsla(0, 0%, 7%, .15);
+    filter: alpha(opacity=0);
+    height: 260px;
+    opacity: 1;
+    top: 281px;
+    visibility: hidden;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+.main-navigation .navbar-nav > li:hover > div.menu-item-dropdown
+{
+    display: block;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
 .navbar.navbar-inverse.navbar-top.navbar-fixed-top{
     float:left;
     width:100%;
@@ -2200,42 +2242,74 @@ background: rgba(0,0,0,0.5);
 
 /*start media querries*/
 @media(max-width:1921px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
-        width:10%;
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
+        width: 16%;
     }
 }
 @media(max-width:1897px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:10%;
     }
 }
 @media(max-width:1872px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:12%;
     }
 }
 @media(max-width:1588px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:16%;
     }
 }
 @media(max-width:1561px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:16%;
     }
 }
 @media(max-width:1541px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:16%;
     }
 }
 @media(max-width:1521px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:16%;
     }
 }
 @media(max-width:1501px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li, .search-icon dropdown a{
+    #menu-menu-1.nav.navbar-nav.navbar-center li
+    {
+        width: auto;
+    }
+    .search-icon dropdown a{
         width:16%;
     }
 }
@@ -2291,12 +2365,12 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:1358px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 16%;
+        width: auto;
     }
 }
 @media(max-width:1345px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 16%;
+        width: auto;
     }
     .product-video .news_video_image {
         padding-left:0!important;
@@ -2309,7 +2383,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:1218px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.7%;
+        width: auto;
         float: left;
     }
 }
@@ -2368,7 +2442,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:1128px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.6%;
+        width: auto;
         float: left;
     }
     .product-video .extra-padding {
@@ -2711,7 +2785,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:955px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.32%;
+        width: auto;
     }
 }
 @media(max-width:935px){
@@ -2724,12 +2798,12 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:925px){
     #menu-menu-1.nav.navbar-nav.navbar-centerli {
-        width: 23.3%;
+        width: auto
     }
 }
 @media(max-width:918px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.2%;
+        width: auto;
     }
 }
 @media(max-width:893px){
@@ -2742,7 +2816,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:870px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.1%;
+        width: auto;
     }
     .main-navigation  #menu-menu-1 > li > a{
         font-size:16px;
@@ -2753,7 +2827,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:830px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23%;
+        width: auto;
     }
     .main-navigation  .navbar-nav > li > a {
         padding: 15px 15px;
@@ -2848,7 +2922,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:785px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 22.9%;
+        width: auto;
     }
 } 
 @media(max-width:767px){

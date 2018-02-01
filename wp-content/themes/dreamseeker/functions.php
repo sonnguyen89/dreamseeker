@@ -174,6 +174,7 @@ function init_action() {
   generate_post_types(); 
 //menu
     register_nav_menu('header-menu', __('Header Menu'));
+    register_nav_menu('mobile-header-menu', __('Mobile Header Menu'));
     register_nav_menu('footer-menu',__( 'Footer Menu' ));
     register_nav_menu('sub-menu-range',__( 'Sub menu range' ));
     register_nav_menu('sub-menu-whatson',__( 'Sub menu whatson' ));
@@ -404,3 +405,14 @@ add_filter('posts_search', '__search_by_title_only', 500, 2);
 
 //**************add category custom field*************
 
+
+//************** customize the main navigation menu item *************
+add_filter('nav_menu_item_args','customize_main_menu_items', 10, 3);
+function customize_main_menu_items( $args, $item, $depth  ) {
+    if( $args->theme_location == 'header-menu' )
+    {
+        $args->after = '<div class="menu-item-dropdown"> test</div>';
+    }
+
+    return $args;
+}

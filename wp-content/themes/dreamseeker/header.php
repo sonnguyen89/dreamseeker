@@ -217,6 +217,15 @@
 
                 });
 
+
+                //these functions  do animation and style for main menu for responsive
+
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
+
+                $( window ).resize(function() {
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
+                });
+
             });
         </script>
 
@@ -261,7 +270,8 @@
                             </div>
                         </span>
 
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false" aria-controls="mobile-navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
