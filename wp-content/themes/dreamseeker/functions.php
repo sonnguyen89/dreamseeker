@@ -409,9 +409,53 @@ add_filter('posts_search', '__search_by_title_only', 500, 2);
 //************** customize the main navigation menu item *************
 add_filter('nav_menu_item_args','customize_main_menu_items', 10, 3);
 function customize_main_menu_items( $args, $item, $depth  ) {
-    if( $args->theme_location == 'header-menu' )
+    if( $args->theme_location == 'header-menu' && $item->object == 'products' )
     {
-        $args->after = '<div class="menu-item-dropdown"> test</div>';
+
+        if($_product = get_post($item->object_id))
+        {
+            //price
+
+
+            $product_content  = '<div class="dropdown-content">' ;
+            $product_content .= '<div class="dropdown-title">' ;
+            $product_content .= '<h2>' . $_product->post_title . '</h2>';
+            $product_content .=  '</div>';
+            $product_content .= '<div class="product-content">' . $_product->post_content . '</div>';
+
+
+            $sz_ft = get_field('size_feet', $_product->ID) ? get_field('size_feet',  $_product->ID) : "";
+
+            $sz_inch = get_field('size_inches',  $_product->ID) ? get_field('size_inches',  $_product->ID) : "";
+
+            $occ = get_field('occupants',  $_product->ID) ? get_field('occupants',  $_product->ID) : "";
+
+
+            if ($sz_ft != '' || $sz_inch != '')
+            {
+                $product_content .= '<div class="product-size"><span class="size_wr"><span class="size_img"></span>'. $sz_ft .'\'' . $sz_inch . '"' .'</span> </div>';
+
+
+            }
+            if ($occ != '')
+            {
+                $product_content .= '<div class="product-occupant"><span class="occu_wr"> <span class="occu_img"></span>'. $occ . '</span></div>';
+            }
+            $product_content .= '<a type="button"  class="product-find-more" href="'. $item->url . '">FIND OUT MORE</a>';
+
+
+            $product_content .=  '</div>';
+
+            //image
+            $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
+            $image_htlm = '<img class="dropdown-image" src="'. $p_image[0].'"/>';
+
+
+
+
+            $args->after = '<div class="menu-item-dropdown">'. $image_htlm . $product_content . '</div>';
+        }
+
     }
 
     return $args;
