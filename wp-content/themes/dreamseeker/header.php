@@ -219,7 +219,17 @@
 
 
                 //these functions  do animation and style for main menu for responsive
-                if($(window).width() <= 1150 )
+                if($(window).width() <= 990 )
+                {
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', '100%');
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left','50%' );
+                    $( window ).resize(function(){
+
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', '100%');
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left','50%' );
+                    });
+                }
+                else if($(window).width() <= 1150 )
                 {
                     $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
                     var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);

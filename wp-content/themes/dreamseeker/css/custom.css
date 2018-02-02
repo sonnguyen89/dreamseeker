@@ -1913,9 +1913,21 @@ footer .firs-section .icon-ig:hover{
     height: auto;
 
 }
-.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-content
+.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .dropdown-title h2
 {
-
+    font-size: 50px;
+}
+@media(max-width:1800px)
+{
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .dropdown-title h2 {
+        font-size: 40px;
+    }
+}
+@media(max-width:1500px)
+{
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .dropdown-title h2 {
+        font-size: 34px;
+    }
 }
 .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content a.product-find-more
 {
