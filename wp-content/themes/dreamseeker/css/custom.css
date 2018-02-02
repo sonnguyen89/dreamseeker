@@ -1830,7 +1830,7 @@ footer .firs-section .icon-ig:hover{
     background-color: #fff;
     padding: 0 10px;
     position: fixed;
-    left: 50%;
+    left: 40%;
     border-top: 1px solid #d9d9d9;
     box-shadow: 0 3px 5px 1px hsla(0, 0%, 7%, .15);
     filter: alpha(opacity=0);
@@ -1840,6 +1840,12 @@ footer .firs-section .icon-ig:hover{
     visibility: hidden;
     z-index: 10;
     transform: translate(-50%, -50%);
+}
+@media(max-width:1921px){
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown
+    {
+        left: 39%;
+    }
 }
 .main-navigation .navbar-nav > li:not(.search-icon):hover > div.menu-item-dropdown
 {
@@ -1851,9 +1857,9 @@ footer .firs-section .icon-ig:hover{
 }
 .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
 {
-    width: 30%;
-    padding: 5px;
+    width: 42%;
     float: left;
+    padding: 10px 0;
 }
 .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content
 {

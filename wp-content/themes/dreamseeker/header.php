@@ -219,12 +219,34 @@
 
 
                 //these functions  do animation and style for main menu for responsive
-
-                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
-
-                $( window ).resize(function() {
+                if($(window).width() <= 1150 )
+                {
                     $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
-                });
+                    var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+                    $( window ).resize(function(){
+
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
+                        var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+                    });
+                }
+                else
+                {
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 500);
+                    var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+
+
+                    $( window ).resize(function(){
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 500);
+
+                        var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+
+                    });
+                }
+
 
             });
         </script>
