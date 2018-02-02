@@ -1882,11 +1882,14 @@ footer .firs-section .icon-ig:hover{
     float: left;
     width: 300px;
     padding: 15px;
+    clear: left;
 }
 
-.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size
+.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
+.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
 {
     padding-top: 10px;
+    float:left;
 }
 .navbar.navbar-inverse.navbar-top.navbar-fixed-top{
     float:left;
