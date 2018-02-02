@@ -88,6 +88,7 @@
     background:#fff;
     color:#000!important;
 }
+#mobile_result_sc,
 #result_sc{
     list-style: none;
 }
@@ -97,11 +98,13 @@
     background: #fff;
     color: #000!important;
 }
+#mobile_result_sc h4, #mobile_result_sc p, #mobile_result_sc a, .search_res.results-items h4,
 #result_sc h4, #result_sc p, #result_sc a, .search_res.results-items h4 {
     color: #58585A !important;
     font-family: "AvenirNextNormal",sans-serif;
     /*font-weight: bold !important;*/
 }
+#mobile_result_sc h4,
 #result_sc h4{
     font-weight: bold !important;
 }
@@ -116,13 +119,16 @@
     font-family: "AvenirNextNormal",sans-serif;
     font-weight: normal !important;
 }
+#mobile_result_sc a p,
 #result_sc a p{
     font-weight: normal !important;
 }
+#mobile_result_sc,
 #result_sc{
     padding-left:0;
     /*border-top:5px solid #000;*/
 }
+#mobile_result_sc li,
 #result_sc li{
     float:left;
     width:100%;
@@ -270,6 +276,7 @@ body.modal-open {
     border-top: 0px;
     margin-right: 0;
     overflow: hidden;
+    z-index:100;
 }
 @media(max-width:767px){
     .search_icon_mobile{
@@ -1844,7 +1851,15 @@ footer .firs-section .icon-ig:hover{
 @media(max-width:1921px){
     .main-navigation .navbar-nav > li > div.menu-item-dropdown
     {
-        left: 39%;
+        padding-top: 10px;
+    }
+}
+@media(max-width:1070px){
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown
+    {
+        padding-top: 10px;
+        padding-left:16px;
+        padding-right:16px;
     }
 }
 .main-navigation .navbar-nav > li:not(.search-icon):hover > div.menu-item-dropdown
@@ -1857,9 +1872,35 @@ footer .firs-section .icon-ig:hover{
 }
 .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
 {
-    width: 42%;
+    width: 46%;
     float: left;
     padding: 10px 0;
+}
+@media(max-width:1700px){
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
+    {
+        width: 51%;
+    }
+}
+@media(max-width:1450px){
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
+    {
+        width: 54%;
+    }
+}
+@media(max-width:1400px)
+{
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
+    {
+        width: 50%;
+    }
+
+}
+@media(max-width:1070px){
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image
+    {
+        width: 45%;
+    }
 }
 .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content
 {
@@ -2502,12 +2543,8 @@ background: rgba(0,0,0,0.5);
     }
 }
 @media(max-width:1040px){
-    #menu-menu-1.nav.navbar-nav.navbar-centerli {
-        width: 23.5%;
-        float: left;
-    }
     .main-navigation .navbar-nav > li > a {
-        padding: 15px 50px;
+        padding: 15px 30px;
     }
 }
 .icon-share.news_ic{
@@ -2631,7 +2668,7 @@ background: rgba(0,0,0,0.5);
         width: 85%;
     }
 
-    .mobile_search_inpu .ui-widget.auto_fill_p #result_sc {
+    .mobile_search_inpu .ui-widget.auto_fill_p #mobile_result_sc {
         background: #fff none repeat scroll 0 0;
         color: #000 !important;
         float: right;
@@ -2667,7 +2704,7 @@ background: rgba(0,0,0,0.5);
     }
     #menu-menu-1.nav.navbar-nav.navbar-center li {
         float: left;
-        width: 23.4%;
+        width: auto;
     }   
     .navbar-brand{
         position: absolute;
@@ -2816,18 +2853,18 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:974px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.35%;
+        width: auto;
     }
 
 }
 @media(max-width:945px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.34%;
+        width: auto;
     }
 }
 @media(max-width:938px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.33%;
+        width: auto;
     }
 }
 @media(max-width:955px){
@@ -2837,7 +2874,7 @@ background: rgba(0,0,0,0.5);
 }
 @media(max-width:935px){
     #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: 23.31%;
+        width: auto;
     }
     .search_inpu .ui-widget {
         width: 93.2%;

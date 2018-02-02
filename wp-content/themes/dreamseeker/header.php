@@ -231,6 +231,21 @@
                         $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
                     });
                 }
+                else if($(window).width() <= 1400 )
+                {
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 300);
+                    var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+
+
+                    $( window ).resize(function(){
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 300);
+
+                        var left_pos = ($(window).width() - $('.main-navbar-content.navbar-center').width()) / 2 + ($('.main-navigation .navbar-nav > li > div.menu-item-dropdown').width() /2);
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('left',left_pos );
+
+                    });
+                }
                 else
                 {
                     $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 500);
@@ -284,9 +299,9 @@
                                 <form role="search" method="get" id="mobi_searchform" class="searc" action="<?php echo home_url('/'); ?>">
                                     <div class="ui-widget auto_fill_p">
                                         <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                                        <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
+                                        <input id="tags" type="text" style="color:#000;" class="search_input mobile_search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
                                         <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
-                                        <ul style="display:block;" id="result_sc"></ul>
+                                        <ul style="display:block;" id="mobile_result_sc"></ul>
                                     </div>
                                 </form>
                             </div>

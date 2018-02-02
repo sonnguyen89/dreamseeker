@@ -175,9 +175,8 @@ jQuery(document).ready(function() {
     });
 
 
-
-    jQuery(".search").keyup(function()
-
+    //desktop search function
+    jQuery("input.search").keyup(function()
     { 
 
         var searchid = jQuery(this).val();
@@ -246,6 +245,75 @@ jQuery(document).ready(function() {
 
     });
 
+
+    //mobile search function
+    jQuery("input.mobile_search").keyup(function()
+    {
+
+        var searchid = jQuery(this).val();
+
+        var search_text = searchid;
+
+
+        if(searchid!='')
+
+        {
+
+            jQuery.ajax({
+
+                type: 'POST',
+
+                url: wpdrm.ajaxurl,
+
+                data: {
+
+                    pgnonce: wpdrm.PGNonce,
+
+                    'action': 'show_search_result',
+
+                    'search_text': search_text
+
+                },
+
+                beforeSend: function() {
+
+
+
+                },
+
+                success: function(responce) {
+
+                    jQuery('.hide_load').show();
+
+                    if (responce) {
+
+                        jQuery('#mobile_result_sc').css('display', 'block');
+
+                        jQuery('#mobile_result_sc').empty();
+
+                        jQuery('#mobile_result_sc').append(responce);
+
+                        jQuery('.hide_load').hide();
+
+                    } else {
+
+
+
+                    }
+
+                }
+
+
+
+            });
+
+
+
+        }
+
+        return false;
+
+    });
 
 
     jQuery("#result").live("click",function(e){ 
