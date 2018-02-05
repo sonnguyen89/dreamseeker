@@ -446,7 +446,7 @@ function customize_main_menu_items( $args, $item, $depth  ) {
 
             $product_content .=  '</div>';
 
-            //image
+            //product image
             $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
             $image_htlm = '<img class="dropdown-image" src="'. $p_image[0].'"/>';
 
@@ -454,9 +454,33 @@ function customize_main_menu_items( $args, $item, $depth  ) {
 
 
             $args->after = '<div class="menu-item-dropdown">'. $image_htlm . $product_content . '</div>';
+
         }
 
     }
+    else if( $args->theme_location == 'mobile-header-menu' && $item->object == 'products')
+    {
+
+
+
+        if($_product = get_post($item->object_id))
+        {
+            //product image
+            $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
+
+            $image_htlm = '<p><a type="button"  class="product-find-more" href="'. $item->url . '"><img class="dropdown-image" src="'. $p_image[0].'" width="300"/></a></p>';
+
+
+
+            $args->after = $image_htlm ;
+
+        }
+    }
+    else
+    {
+        $args->after = '';
+    }
 
     return $args;
+
 }

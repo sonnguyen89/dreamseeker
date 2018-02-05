@@ -303,7 +303,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-
+                        <!--  search function for mobile theme --->
                         <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a>
                             <div class="mobile_search_inpu">
                                 <form role="search" method="get" id="mobi_searchform" class="searc" action="<?php echo home_url('/'); ?>">
@@ -317,14 +317,15 @@
                             </div>
                         </span>
 
-
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false" aria-controls="mobile-navbar">
+                        <!--  mobile navigation button/ toggle  --->
+                        <button type="button" class="navbar-toggle">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
 
+                        <!--  desktop/tablet navigation menu --->
                         <div id="navbar" class="main-navigation navbar-collapse collapse">
                             <?php
                             wp_nav_menu(array(
@@ -332,7 +333,7 @@
                                 'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
                             ));
                             ?>
-
+                            <!--  search function--->
                             <div class="search_inpu">
                                 <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
                                     <div class="ui-widget auto_fill_p">
@@ -345,7 +346,80 @@
 
                             </div>
                         </div>
+
+                        <!--  mobile navigation menu --->
+                        <div id="mobile-navbar" class="mobile-navigation">
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'mobile-header-menu',
+                                'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
+                            ));
+                            ?>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </nav>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            // Enter your ids or classes
+            var pagewrapper = '#page-content';
+            var navigationwrapper = '.navbar-header';
+            var menuwidth = '100%'; // the menu inside the slide menu itself
+            var slidewidth = '80%';
+            var menuneg = '-100%';
+            var slideneg = '-80%';
+
+
+            $("button.navbar-toggle").on("click", function (e) {
+
+                var selected = $(this).hasClass('mobile-active');
+                $(this).toggleClass('mobile-active', !selected);
+                $(' #mobile-navbar.mobile-navigation').toggleClass('mobile-active');
+
+
+                $('#mobile-navbar.mobile-navigation:not(.mobile-active)').stop().animate({
+                    left:'-100%'
+                });
+
+                $('#mobile-navbar.mobile-navigation.mobile-active').stop().animate({
+                    left:'0px'
+                });
+
+            });
+            $(" #mobile-navbar.mobile-navigation .main-navbar-content li").has('ul.sub-menu').children('a').append('<img class="right_arrow_img" src="<?php echo get_template_directory_uri() ?>/img/right_arrow_menu.png"/>');
+            $(" #mobile-navbar.mobile-navigation .main-navbar-content li").has('ul.sub-menu').children('a').append('<img class="left_arrow_img" src="<?php echo get_template_directory_uri() ?>/img/left_arrow_menu.png"/>');
+
+
+            $(" #mobile-navbar.mobile-navigation .main-navbar-content li").on("click", function (e) {
+
+                var top = $(this).height();
+                $(this).children('ul.sub-menu').css({'top':  top });
+                $(this).children('ul.sub-menu').css({'height':  $(window).height() - 200});
+
+
+                var selected = $(this).hasClass('mobile-active');
+                $(this).toggleClass('mobile-active', !selected);
+                $(this).children('ul.sub-menu').toggleClass('mobile-active');
+
+
+
+                $(this).children('ul.sub-menu').stop().animate({
+                    left:'0px'
+                });
+
+                $(this).children('ul.sub-menu:not(.mobile-active)').stop().animate({
+                    left:'-100%'
+                });
+
+            });
+
+
+
+        });
+
+    </script>
+
