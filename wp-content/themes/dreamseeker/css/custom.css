@@ -1496,26 +1496,26 @@ footer .firs-section .s-icons{
 
 footer .firs-section .icon-fb {
 
-    background-position: 331px 218px;
+    background-position: 326px 214px;
 }
 footer .firs-section .icon-tw {
 
-    background-position: 252px 220px;
+    background-position: 248px 215px;
 }
 footer .firs-section .icon-yt{
 
-    background-position: 177px 218px;
+    background-position:172px 213px;
 }
 footer .firs-section .icon-ig{
 
-    background-position: 101px 218px;
+    background-position: 95px 213px;
 }
 footer .firs-section .s-icons{
     border-radius: 50%;
     float: left;
-    height: 60px;
+    height: 50px;
     margin-right: 7px;
-    width: 60px;
+    width: 50px;
     border:2px solid #fff;
 }
 footer .firs-section .s-icons:last-child{
@@ -1523,7 +1523,7 @@ footer .firs-section .s-icons:last-child{
 }
 footer .firs-section .icon-fb:hover{
     opacity: 0.4;
-    background-position: 331px 218px;
+    background-position: 326px 214px;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     background-color: #fff !important;

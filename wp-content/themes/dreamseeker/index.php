@@ -102,7 +102,9 @@ global $post;
         <div class="row">
             <?php $news_title = get_field('home_page_news_section_title', $hm_id); ?>
             <div class="header-wrapper">
+                <div class="col-md-12 nopadding">
                 <h2><?php echo $news_title; ?></h2>
+                </div>
             </div>
         </div>
         <div class="row">
