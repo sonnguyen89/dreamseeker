@@ -19,7 +19,7 @@ global $post;
     <div class="overlay"></div> 
 </div>
 <div class="scroll-down scroll-slow">
-    <a href="#featured-products">scroll down <i class="fa fa-angle-down"></i></a>
+    <a href="#featured-products"><i class="fa fa-chevron-down"></i></a>
 </div> 
 
 <!-- =============== Featured Products =============== -->

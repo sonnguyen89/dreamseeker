@@ -1496,34 +1496,34 @@ footer .firs-section .s-icons{
 
 footer .firs-section .icon-fb {
 
-    background-position: 333px 222px;
+    background-position: 331px 218px;
 }
 footer .firs-section .icon-tw {
 
-    background-position: 255px 222px;
-    /*background-position: 423px 275px;*/
+    background-position: 252px 220px;
 }
 footer .firs-section .icon-yt{
 
-    background-position: 180px 222px;
+    background-position: 177px 218px;
 }
 footer .firs-section .icon-ig{
 
-    background-position: 103px 221px;
+    background-position: 101px 218px;
 }
 footer .firs-section .s-icons{
-    /*    width:60px;
-        height: 60px;*/
+    border-radius: 50%;
     float: left;
     height: 60px;
     margin-right: 7px;
     width: 60px;
+    border:2px solid #fff;
 }
 footer .firs-section .s-icons:last-child{
     margin-right:0;
 }
 footer .firs-section .icon-fb:hover{
-    background-position: -44px 103px;
+    opacity: 0.4;
+    background-position: 331px 218px;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     background-color: #fff !important;
@@ -1549,13 +1549,16 @@ footer .firs-section .icon-fb:hover{
     right: 49%;
 }
 footer .firs-section .icon-tw:hover{
-    background-position: 257px 102px;
+    opacity: 0.4;
+    background-position: 252px 220px;
 }
 footer .firs-section .icon-yt:hover{
-    background-position: 182px 102px;
+    opacity: 0.4;
+    background-position: 177px 218px;
 }
 footer .firs-section .icon-ig:hover{
-    background-position: 105px 101px;
+    opacity: 0.4;
+    background-position: 101px 218px;
 }
 .navbar-second .dropdown-menu > li > a{
     border:none!important;
@@ -2150,7 +2153,6 @@ footer .firs-section .icon-ig:hover{
         top: 115px;
     }
 }
-
 .navbar.navbar-inverse.navbar-top.navbar-fixed-top{
     float:left;
     width:100%;
@@ -2171,8 +2173,12 @@ footer .firs-section .icon-ig:hover{
 .navbar-right{
     margin-right: -1px;
 }
+.range-heroimg
+{
+    margin-top: 150px;
+}
 .second-navbar{
-    margin-top:90px;
+    margin-top: 150px;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
     margin-left:50px;
@@ -4833,4 +4839,8 @@ hr.section-divider{
     z-index: 100;
     width: 1500px;
     top: 120px;
+}
+
+.scroll-down{
+    width:50px;
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <title>
-            <?php if (is_home() || is_front_page()) { ?>
-                Dreamseeker
-                <?php
-            } else {
-                wp_title();
-            }
-            ?>
-        </title>  
-        <?php wp_head(); ?>
+<head>
+    <title>
+        <?php if (is_home() || is_front_page()) { ?>
+            Dreamseeker
+            <?php
+        } else {
+            wp_title();
+        }
+        ?>
+    </title>
+    <?php wp_head(); ?>
     <!--<meta charset="utf-8">-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,214 +18,412 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        </head>
-        <body>
-<!--            header menu style-->
- <script>
-            jQuery(document).ready(function(){
-            jQuery('#menu-menu-1').last().after().append('<li class="visible-xs"><a href="#">Find a Dealer</a></li><li class="visible-xs"><a href="#">Contact Us</a></li><li class="search-icon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>');
-            jQuery('#menu-menu-1').find('.sub-menu').addClass('dropdown-menu');
-            jQuery('#menu-menu-1').find('li').addClass('dropdown');
-            // jQuery('#menu-menu-1').find('.menu-item-has-children a:first').attr( "data-toggle", "dropdown" );
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-            jQuery('#menu-menu-1 .menu-item-has-children').each(function() {
-            jQuery(this).find('a:first').attr( "data-toggle", "dropdown" );
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110544191-1"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-110544191-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+</head>
+<body>
+<?php
+global $post;
+
+//        $titl = array();
+//        $link_blog = array();
+//        $args = array(
+//            'posts_per_page' => -1,
+//            'offset' => 0,
+//            'orderby' => 'post_date',
+//            'category' => '',
+//            'order' => 'DESC',
+//            'post_type' => 'products',
+//            'post_status' => 'publish'
+//        );
+//        $_posts_array = get_posts($args);
+//        foreach ($_posts_array as $_post1) {
+//            if (has_post_thumbnail($_post1->ID)) {
+//                $url = wp_get_attachment_image_src(get_post_thumbnail_id($_post1->ID), 'full');
+//            }
+//            $titl[] = $_post1->post_title;
+//            $link_blog[$_post1->post_title] = get_permalink($_post1->ID);
+?>
+<?php // } ?>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cdbf8f0515bb4a" async="async"></script>-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cdbf8f0515bb4a" async="async"></script>
+
+<!--            header menu style-->
+<script>
+    //            var link_blog = JSON.parse('<?php // echo json_encode($link_blog); ?>');
+
+    jQuery(document).ready(function($) {
+
+
+        $('#navbar ul.main-navbar-content')
+            .last()
+            .after()
+            .append('<li class="visible-xs"><a href="#">Find a Dealer</a></li>\
+                              <li class="visible-xs"><a href="#">Contact Us</a></li>\n\
+                               <li class="search-icon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>'
+            );
+        $('#navbar ul.main-navbar-content').find('.sub-menu').addClass('dropdown-menu');
+        $('#navbar ul.main-navbar-content').find('li').addClass('dropdown');
+
+        $('#navbar ul.main-navbar-content .menu-item-has-children').each(function() {
+            jQuery(this).find('a:first').attr("data-toggle", "dropdown");
             jQuery(this).find('a:first').append('<span class="caret"></span>');
-            });       
-            jQuery('.top-menu-bar li a').append(' <i class="fa fa-angle-right"></i>');
-     
-            });
-</script>
-<!--            header menu style-->
-<!--            footr menu style-->
-            <script>
-        jQuery(document).ready(function(){
-          jQuery('.footer-navbar-nav .menu-item-has-children').each(function() {
-            jQuery(this).addClass('col-md-2 col-sm-4 col-xs-6');
-             jQuery(this).find('a:first').css({"font-size": "14px", "text-decoration": "none", "font-family": '"AvenirNextBold",sans-serif'});
-             jQuery(this).find('a:first').removeAttr("href");
-             jQuery(this).find('.sub-menu').css({"margin-top": "5px"});
-            
-            });
-            jQuery('#menu-item-82').removeClass('col-md-2');
-            jQuery('#menu-item-82').addClass('col-md-3');
-       
-       });
-            </script>
-            
-                  <script>
-        jQuery(document).ready(function(){
-            if(jQuery('.menu-item-object-products_category').trigger("click")){                
-                var str = window.location.href;
-                 var res_link = str.split("#");
-                 jQuery('.product_category').val(res_link[1].replace('/', ''))
-                 jQuery('.product_category').trigger('change')
-//                 jQuery("html, body").animate({scrollTop: jQuery("#scroll_here").offset().top - 80}, 3000);
-            }
-            
-            jQuery('.menu-item-object-products_category').click(function(e){
-            e.preventDefault();           
-              var val_opt1 = jQuery(this).find("a").text();
-             jQuery.each(jQuery('.product_category option'), function() {
-                 if((jQuery(this).text()) == val_opt1){
-                      jQuery('.product_category').val(jQuery(this).val());
-                      jQuery('.product_category').trigger('change');
-                    jQuery('.navbar-second a').removeClass("sec-nav-bg-color");
-//                    jQuery("html, body").animate({scrollTop: jQuery("#scroll_here").offset().top - 80}, 3000);
-                 }
-             });    
+        });
+        $('.top-menu-bar li a').append(' <i class="fa fa-angle-right"></i>');
 
-      });
-     jQuery('.product_category_sub_menu li').click(function(e){
+        $('.footer-navbar-nav .menu-item-has-children').each(function() {
+            $(this).addClass('col-md-2 col-sm-4 col-xs-6');
+            $(this).find('a:first').css({"font-size": "14px", "text-decoration": "none", "font-family": '"AvenirNextBold",sans-serif'});
+            $(this).find('a:first').removeAttr("href");
+            $(this).find('.sub-menu').css({"margin-top": "5px"});
+
+        });
+        $('#menu-item-82').removeClass('col-md-2');
+        $('#menu-item-82').addClass('col-md-3');
+
+        $('.menu-item-object-products_category').click(function(e) {
             e.preventDefault();
-            var val_opt = jQuery(this).find("a").text();
-             jQuery.each(jQuery('.product_category option'), function() {
-                 if((jQuery(this).text()) == val_opt){
-                      jQuery('.product_category').val(jQuery(this).val());
-                      jQuery('.product_category').trigger('change')
-                 }
-             });           
-            jQuery('.navbar-second a').removeClass("sec-nav-bg-color");
-            jQuery(this).find("a").addClass( "sec-nav-bg-color" );
-          //  jQuery("html, body").animate({scrollTop: jQuery("#scroll_here").offset().top - 80}, 1000);
-      });
-         });
-             </script>             
-             <script>
-                jQuery(document).ready(function(){
-                    jQuery('#menu-menu-1.nav li.dropdown').hover(function() {
-                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-                }, function() {
-                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-                });
+            var str = $(this).find("a").attr('href');
+            var res_link = str.split("products_category");
+            var str = res_link[1];
+            window.location.replace(res_link[0] + 'off-road/#' + res_link[1].replace("/", ""));
+            $('.product_category').val($(this).find("a").text())
+            $('.product_category').trigger('change')
+            $("html, body").animate({scrollTop: $("#scroll_here").offset().top}, 1000);
+        });
+        $('#navbar ul.main-navbar-content li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
 
-//                jQuery('#menu-menu-1.nav li.dropdown').toggle(function() {
-//                         jQuery('.dropdown-menu').slideUp();
-//                    jQuery(this).find('.dropdown-menu').slideDown();
-////                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-//                }, function() {
-//                    jQuery('.dropdown-menu').slideUp();
-//                    jQuery(this).find('.dropdown-menu').slideDown();
-////                    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-//                });
-                });
-            </script>
-    <!--google map js-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
 
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        //these functions respond for  animation and style for seach at desktop theme
+        $('.main-navigation .serch_close_sec').click(function()
+        {
 
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
-                };
 
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
+            $('#navbar.main-navigation form.searc').animate({
+                width: "0",
+            }, 500, function(){
+                $(".main-navigation .search-icon").show();
+            });
+            $('.main-navigation .search_inpu').css('overflow', 'hidden');
+            $('.main-navigation input.search_input').val('');
+            $('.main-navigation #result_sc').html('');
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
+        });
+        $(".search-icon").live('click', function()
+        {
+            event.stopPropagation();
+            $('.search-icon').hide();
 
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(40.6700, -73.9400),
-                    map: map,
-                    title: 'Snazzy!'
-                });
+            //set the search form position before doing animation
+            var search_input_right_pos = 0;
+            var search_width = 550;
+            if($(window).width() < 1450 )
+            {
+                search_width = $(window).width();
+                $('.search_input').css({width : '89%'})
             }
-        </script>  
-    <!--/google map js-->
-            
-<!--            footr menu style-->
-    
+            else
+            {
+                $('.search_input').css({width : ''})
+                if((($(window).width() - $('#navbar.main-navigation > div').outerWidth() )/2) > 0 )
+                {
+                    search_input_right_pos = ($(window).width() - $('#navbar.main-navigation > div').outerWidth())/2;
+                }
+            }
+            if($(window).width() < 1000 )
+            {
+                $('.search_input').css({width : '80%'})
+            }
+            $('.search_inpu').css({
+                overflow: 'visible',
+                right : search_input_right_pos
+            });
+
+            $('#navbar.main-navigation form.searc').animate({
+                    width: search_width,
+                },
+                500,
+                function(){
+                    $('input.search_input').focus();
+                }
+            );
+        });
+
+
+
+        //these functions respond for  animation and style for seach at Mobile theme
+
+        $('.mobile_search_inpu .serch_close_sec').click(function()
+        {
+
+            $('.mobile_search_inpu input.search_input').animate({
+                width: "",
+            }, 300, function(){
+                $('.mobile_search_inpu').css('display','');
+                $(".search_icon_mobile > a").show();
+            });
+            $('.mobile_search_inpu').css('overflow', 'hidden');
+            $('.mobile_search_inpu input.search_input').val('');
+            $('.mobile_search_inpu #result_sc').html('');
+
+        });
+
+
+        $(".search_icon_mobile > a").live('click', function()
+        {
+            event.stopPropagation();
+            $('.search_icon_mobile > a').hide();
+            $('.mobile_search_inpu').show();
+
+            if($(window).width() < 450 )
+            {
+
+                $('.mobile_search_inpu input.search_input').css('width','45%')
+                $('.mobile_search_inpu input.search_input').focus();
+            }
+            else
+            {
+                var mobi_search_width = $(window).width() - 250;
+
+
+                $('.mobile_search_inpu input.search_input').animate({
+                        width: mobi_search_width,
+                    },
+                    300,
+                    function(){
+                        $('.mobile_search_inpu input.search_input').focus();
+                    }
+                );
+            }
+
+        });
+
+
+        //these functions  do animation and style for main menu for responsive
+        if($(window).width() <= 990 )
+        {
+            $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', '100%');
+
+            $( window ).resize(function(){
+
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', '100%');
+
+            });
+        }
+        else if($(window).width() <= 1150 )
+        {
+            $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
+
+            $( window ).resize(function(){
+
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width());
+
+            });
+        }
+        else if($(window).width() <= 1300 )
+        {
+            $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 200);
+
+
+            $( window ).resize(function(){
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 200);
+
+
+            });
+        }
+        else if($(window).width() <= 1400 )
+        {
+            $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 300);
+
+
+            $( window ).resize(function(){
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 300);
+
+
+            });
+        }
+        else
+        {
+            $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 200);
+
+
+            $( window ).resize(function(){
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown').css('width', $('.main-navbar-content.navbar-center').width() - 200);
+
+            });
+        }
+
+
+
+        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
+
+
+    });
+</script>
+
 <style type="text/css">
     html{
         margin-top:0px !important;
     }
 </style>
-<script>
-                jQuery(document).ready(function(){
-                jQuery('.serch_close_sec').click(function(){
-                jQuery('.search_inpu').css('display','none');
-                });
-                });
-            </script>
 
 
-<!--    <nav class="navbar navbar-inverse navbar-top navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand logo text-hide" href="<?php bloginfo('url'); ?>">Dream Seeker</a>
-        </div>
-        <div id="navbar-secondary" class="hidden-xs navbar-collapse navbar-secondary ">
-        <?php wp_nav_menu(array(
-//                        'theme_location' => 'header-top-menu',
-//                        'menu_class'      => 'top-menu-bar nav navbar-nav navbar-right'
-         )); ?>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-primary">
-           <?php wp_nav_menu(array(
-//               'theme_location' => 'header-menu',
-//               'menu_class'      => 'nav navbar-nav navbar-right'
-          )); ?>
-        </div>
-      </div>
-    </nav>-->
 <nav class="navbar navbar-inverse navbar-top navbar-fixed-top" role="navigation">
-      <div class="container-fluid" style="">
-          <div class="col-md-12" style="">
-        <div class="navbar-header col-md-2" style="">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-           <div class="logo_brnd"><a class="navbar-brand logo text-hide" href="<?php bloginfo('url'); ?>">DreamSeeker</a></div>
-        </div>
-         <div class="second_main_navbar col-md-10" style="padding:0px;">
-        <div id="navbar-secondary" class="hidden-xs navbar-collapse navbar-secondary " style="float:left;width:100%;margin-top: -5px;">
-           <?php wp_nav_menu(array(
+    <div class="container-fluid">
+        <div class="row">
+            <div class="navbar-header col-md-12">
+                <div class="navbar-header-content navbar-center">
+
+                    <div class="logo_brnd"><a class="navbar-brand logo text-hide" href="<?php bloginfo('url'); ?>">Dream Seeker</a></div>
+
+                    <?php
+                    wp_nav_menu(array(
                         'theme_location' => 'header-top-menu',
-                        'menu_class'      => 'top-menu-bar nav navbar-nav navbar-right'
-         )); ?>
+                        'menu_class' => 'top-menu-bar nav navbar-nav navbar-right'
+                    ));
+                    ?>
+                </div>
+            </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-primary" style="float:left;width:100%; margin-top:15px;">
-          <?php wp_nav_menu(array(
-               'theme_location' => 'header-menu',
-               'menu_class'      => 'nav navbar-nav navbar-right'
-          )); ?>
-            <div class="search_inpu">
-                                <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!--  search function for mobile theme --->
+                <span class="search_icon_mobile"><a href="#"><span class="glyphicon glyphicon-search"></span></a>
+                            <div class="mobile_search_inpu">
+                                <form role="search" method="get" id="mobi_searchform" class="searc" action="<?php echo home_url('/'); ?>">
                                     <div class="ui-widget auto_fill_p">
-                                        <i class="mk-icon-search fullscreen-search-icon"> <input type="submit" id="searchsubmit" style=""  value="Search"  class="search_btn"/></i>
-                                        <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="Search Here"  autocomplete="off" />
-                                        <!--<input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="Search Here"/>-->
-                                        <ul style="display:block;" id="result_sc"></ul>
+                                        <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        <input id="tags" type="text" style="color:#000;" class="search_input mobile_search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
+                                        <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
+                                        <ul style="display:block;" id="mobile_result_sc"></ul>
                                     </div>
                                 </form>
-                                <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/ser_close.png"/></span>
                             </div>
+                        </span>
+
+                <!--  mobile navigation button/ toggle  --->
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!--  desktop/tablet navigation menu --->
+                <div id="navbar" class="main-navigation navbar-collapse collapse">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'header-menu',
+                        'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
+                    ));
+                    ?>
+                    <!--  search function--->
+                    <div class="search_inpu">
+                        <form role="search" method="get" id="searchform" class="searc" action="<?php echo home_url('/'); ?>">
+                            <div class="ui-widget auto_fill_p">
+                                <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                <input id="tags" type="text" style="color:#000;" class="search_input search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
+                                <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
+                                <ul style="display:block;" id="result_sc"></ul>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!--  mobile navigation menu --->
+                <div id="mobile-navbar" class="mobile-navigation">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'mobile-header-menu',
+                        'menu_class' => 'main-navbar-content nav navbar-nav navbar-center'
+                    ));
+                    ?>
+                </div>
+
+            </div>
         </div>
-      </div>
-      </div>
-      </div>
-    </nav>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        // Enter your ids or classes
+        var pagewrapper = '#page-content';
+        var navigationwrapper = '.navbar-header';
+        var menuwidth = '100%'; // the menu inside the slide menu itself
+        var slidewidth = '80%';
+        var menuneg = '-100%';
+        var slideneg = '-80%';
+
+
+        $("button.navbar-toggle").on("click", function (e) {
+
+            var selected = $(this).hasClass('mobile-active');
+            $(this).toggleClass('mobile-active', !selected);
+            $(' #mobile-navbar.mobile-navigation').toggleClass('mobile-active');
+
+
+            $('#mobile-navbar.mobile-navigation:not(.mobile-active)').stop().animate({
+                left:'-100%'
+            });
+
+            $('#mobile-navbar.mobile-navigation.mobile-active').stop().animate({
+                left:'0px'
+            });
+
+        });
+        $(" #mobile-navbar.mobile-navigation .main-navbar-content li").has('ul.sub-menu').children('a').append('<img class="right_arrow_img" src="<?php echo get_template_directory_uri() ?>/img/right_arrow_menu.png"/>');
+        $(" #mobile-navbar.mobile-navigation .main-navbar-content li").has('ul.sub-menu').children('a').append('<img class="left_arrow_img" src="<?php echo get_template_directory_uri() ?>/img/left_arrow_menu.png"/>');
+
+
+        $(" #mobile-navbar.mobile-navigation .main-navbar-content li").on("click", function (e) {
+
+            var top = $(this).height();
+            $(this).children('ul.sub-menu').css({'top':  top });
+            $(this).children('ul.sub-menu').css({'height':  $(window).height() - 200});
+
+
+            var selected = $(this).hasClass('mobile-active');
+            $(this).toggleClass('mobile-active', !selected);
+            $(this).children('ul.sub-menu').toggleClass('mobile-active');
+
+
+
+            $(this).children('ul.sub-menu').stop().animate({
+                left:'0px'
+            });
+
+            $(this).children('ul.sub-menu:not(.mobile-active)').stop().animate({
+                left:'-100%'
+            });
+
+        });
+
+
+
+    });
+
+</script>
+
