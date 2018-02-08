@@ -1550,15 +1550,15 @@ footer .firs-section .icon-fb:hover{
 }
 footer .firs-section .icon-tw:hover{
     opacity: 0.4;
-    background-position: 252px 220px;
+    background-position: 248px 215px;
 }
 footer .firs-section .icon-yt:hover{
     opacity: 0.4;
-    background-position: 177px 218px;
+    background-position:172px 213px;
 }
 footer .firs-section .icon-ig:hover{
     opacity: 0.4;
-    background-position: 101px 218px;
+    background-position: 95px 213px;
 }
 .navbar-second .dropdown-menu > li > a{
     border:none!important;
@@ -2619,41 +2619,6 @@ background: rgba(0,0,0,0.5);
 @media(min-width:1518px) and (max-width:1700px){
     .search_inpu .ui-widget{
         width:96%;
-    }
-}
-@media(max-width:1508px){
-    footer .firs-section .s-icons {
-        height: 50px;
-        width: 50px;
-    }
-    footer .firs-section .icon-fb {
-
-        background-position:330px 216px;
-    }
-    footer .firs-section .icon-tw {
-
-        background-position: 249px 216px;
-        /*background-position: 423px 275px;*/
-    }
-    footer .firs-section .icon-yt{
-
-        background-position: 175px 216px;
-    }
-    footer .firs-section .icon-ig{
-
-        background-position:98px 216px;
-    }
-    footer .firs-section .icon-fb:hover{
-        background-position: -48px 96px;
-    }
-    footer .firs-section .icon-tw:hover{
-        background-position: 252px 96px;
-    }
-    footer .firs-section .icon-yt:hover{
-        background-position: 177px 96px;
-    }
-    footer .firs-section .icon-ig:hover{
-        background-position: 100px 96px;
     }
 }
 @media(max-width:1358px){
