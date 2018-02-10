@@ -19,7 +19,7 @@ global $post;
     <div class="overlay"></div> 
 </div>
 <div class="scroll-down scroll-slow">
-    <a href="#featured-products"><i class="fa fa-chevron-down"></i></a>
+    <a href="#featured-products" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 26px;">&#8595;</a>
 </div> 
 
 <!-- =============== Featured Products =============== -->

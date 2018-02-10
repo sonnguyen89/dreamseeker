@@ -933,7 +933,7 @@ footer .firs-section .btn-default {
     letter-spacing: 2px;
 }
 footer .firs-section .btn-default:hover {
-    background: #fff;
+   /* background: #fff;*/
     color: #000;
 }
 footer .firs-section .form-group {
