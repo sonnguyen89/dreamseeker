@@ -3,7 +3,6 @@
     ================================================== -->
     <div class="firs-section" >
         <div class="container footer_main_continer">
-            <!--<div class="container-fluid footer_main_continer">-->
             <div class="row">
                 <?php
                 wp_nav_menu(array(

@@ -139,7 +139,6 @@ global $post;
                 </div>
                 <div class="col-md-4 nopadding news-items">
                     <a href="<?php echo get_permalink(cedo_get_option('cedo_us_id')); ?>">
-                   <!--<h4><span class="col_3_hd_sc"><span class="icons-news ico-upcoming-shows"></span><span class="tx_hd_wrp"><?php // echo $upcoming_show_heading;      ?></span></span></h4>-->
                         <span class="icon_bb"><?php echo $upcoming_show_heading; ?></span>
                         <ul class="hm_col_3_ul">
                             <li><?php echo $upcoming_show_one; ?></li>
@@ -150,7 +149,6 @@ global $post;
                 </div>
                 <div class="col-md-4 nopadding news-items">
                     <a href="<?php echo get_permalink(cedo_get_option('cedo_md_id')); ?>">
-                   <!--<h4><span class="col_3_hd_sc"><span class="icons-news ico-media"></span><span class="tx_hd_wrp"><?php // echo $media_heading;      ?></span></span></h4>-->
                         <span class="icon_cc"><?php echo $media_heading; ?></span>
                         <ul class="hm_col_3_ul">
                             <li><?php echo $media_news_one; ?></li>

@@ -420,7 +420,7 @@ input[readonly] {
 }
 
 .hero-banner .container a:hover {
-    background: #de7100;   
+   /* background: #de7100;   */
 }
 
 .hero-banner .overlay {
@@ -793,8 +793,8 @@ input[readonly] {
     letter-spacing: 5px;
 }
 .calltoaction-home .btn-primary:hover {
-    background: #fff;
-    color: #000;
+   /* background: #fff;
+    color: #000;*/
 }
 .logos-home {
     background: #d1d2d4;
