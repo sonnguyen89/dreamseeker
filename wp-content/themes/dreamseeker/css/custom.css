@@ -4533,11 +4533,11 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     position: relative;
     padding: 0;
 }
-@media only screen and (max-width: 866px)
+@media only screen and (max-width: 868px)
 {
     .hero-banner {
         height: auto;
-        padding-top: 100px;
+        padding-top: 0px;
     }
 }
 
@@ -4634,7 +4634,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
         top: 230px;
     }
 }
-@media(max-width:1550px)
+@media(max-width:1520px)
 {
     .f-product-items .feature_desc_wrpper
     {
@@ -4878,7 +4878,6 @@ hr.section-divider{
     cursor: none;
 
 }
-
 .hero-banner #banner_cursor
 {
     position: absolute;
@@ -4897,6 +4896,20 @@ hr.section-divider{
 .hero-banner .banner-list .owl-controls
 {
     position:absolute;
+    bottom: 15px;
+}
+.hero-banner .banner-list .owl-controls .owl-pagination .owl-page .owl-numbers
+{
+    font-family: lr_ot4,arial,helvetica,sans-serif;
+    font-size: 26px;
+    background: none;
+    opacity: 0.7;
+}
+.hero-banner .banner-list .owl-controls .owl-pagination .owl-page.active .owl-numbers
+{
+    font-size: 46px;
+    background: none;
+    opacity: 1;
 }
 .hero-banner .banner-list .owl-controls .owl-buttons .owl-prev,
 .hero-banner .banner-list .owl-controls .owl-buttons .owl-next
