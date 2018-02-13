@@ -329,7 +329,7 @@ body.modal-open {
 .mobile_search_inpu input.search_input
 {
     float: right;
-    width: auto;
+    width: 0;
     padding:0;
     padding-top: 12px;
 }
@@ -4524,8 +4524,14 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 .logos-home{
     background-color: #ffffff;
 }
-.hero-banner .overlay {
-    display: none;
+.hero-banner
+{
+    margin-top: 150px;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    height: auto;
+    position: relative;
+    padding: 0;
 }
 @media only screen and (max-width: 866px)
 {
@@ -4545,7 +4551,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     font-family: Nobel,Arial,sans-serif;
     font-size:50px;
 }
-.hero-banner .container a
+.hero-banner .banner-content a
 {
     background:none;
     border:1px solid #fff;
@@ -4560,7 +4566,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     background-position: 50% calc(100% - 11px),0 0;
 }
 
-.hero-banner .container a:hover
+.hero-banner .banner-content a:hover
 {
 
     background-size: 2em 1px,100%;
@@ -4867,14 +4873,56 @@ hr.section-divider{
     margin: 0 auto;
     max-width: 1600px;
 }
+.hero-banner
+{
+    cursor: none;
 
-.hero-banner .container {
-    padding-top: 13%;
-    max-width: 80%;
+}
+
+.hero-banner #banner_cursor
+{
+    position: absolute;
+    left: -20px;
+    top: -160px;
+    will-change: transform;
+    transform: translate(-999px, -999px);
+    pointer-events: none;
+}
+.hero-banner #banner_cursor img
+{
+    will-change: transform;
+    transition: transform 0.3s;
+}
+
+.hero-banner .banner-list .owl-controls
+{
+    position:absolute;
+}
+.hero-banner .banner-list .owl-controls .owl-buttons .owl-prev,
+.hero-banner .banner-list .owl-controls .owl-buttons .owl-next
+{
+    display:none;
+}
+.hero-banner .container-fluid {
+    padding-top: 0;
     position: relative;
     z-index: 100;
-    width: 1500px;
-    top: 120px;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height:auto;
+}
+.hero-banner .banner-content
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 8%;
+    width: 100%;
+    padding-left: 21%;
+}
+.hero-banner .container-fluid img{
+    width:100%;
 }
 @media only screen and (max-width: 650px)
 {

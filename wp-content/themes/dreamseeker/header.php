@@ -194,26 +194,19 @@
                     $('.search_icon_mobile > a').hide();
                     $('.mobile_search_inpu').show();
 
-                    if($(window).width() < 450 )
-                    {
 
-                        $('.mobile_search_inpu input.search_input').css('width','45%')
-                        $('.mobile_search_inpu input.search_input').focus();
-                    }
-                    else
-                    {
-                        var mobi_search_width = $(window).width() - 250;
+                    var mobi_search_width = $(window).width() - 250;
 
 
-                        $('.mobile_search_inpu input.search_input').animate({
-                                width: mobi_search_width,
-                            },
-                            300,
-                            function(){
-                                $('.mobile_search_inpu input.search_input').focus();
-                            }
-                        );
-                    }
+                    $('.mobile_search_inpu input.search_input').animate({
+                            width: mobi_search_width,
+                        },
+                        300,
+                        function(){
+                            $('.mobile_search_inpu input.search_input').focus();
+                        }
+                    );
+
 
                 });
 
@@ -312,9 +305,9 @@
                             <div class="mobile_search_inpu">
                                 <form role="search" method="get" id="mobi_searchform" class="searc" action="<?php echo home_url('/'); ?>">
                                     <div class="ui-widget auto_fill_p">
-                                        <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                         <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
                                         <input id="tags" type="text" style="color:#000;" class="search_input mobile_search"  value="" name="s"   placeholder="SEARCH...."  autocomplete="off" />
-                                        <span class="serch_close_sec"><img src="<?php echo get_template_directory_uri() ?>/img/serch_close_icon_black.png"/></span>
+                                         <button class="search_btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                         <ul style="display:block;" id="mobile_result_sc"></ul>
                                     </div>
                                 </form>

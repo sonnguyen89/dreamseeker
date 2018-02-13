@@ -5,22 +5,117 @@ global $post;
 <?php $hm_id = cedo_get_option('cedo_home_id'); ?>
 <script>
     jQuery(document).ready(function() {
-        //setTimeout(function(){
-        //jQuery('.scroll-down.scroll-slow').insertAfter('.ls-bottom-nav-wrapper');
-        //}, 800);
+        $("#banner-list").owlCarousel({
+
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true,
+            mouseDrag:false
+        });
+
+
+        $("#banner-list .owl-item img").click(function(event){
+                var x = event.pageX;
+                var y =  event.pageY;
+
+                var half_point = $(window).width() / 2;
+
+                if(x >= half_point )
+                {
+                    $("#banner-list").trigger('owl.next');
+                }
+                else
+                {
+                    $("#banner-list").trigger('owl.prev');
+                }
+
+            }
+        );
+        $(".hero-banner").mousemove(function(event)
+        {
+           //current mouse cursor position
+           var x = event.pageX;
+           var y =  event.pageY;
+
+           var cursorEl = $('#banner_cursor');
+           var cursorImageEl = $('#banner_cursor > img');
+
+            // Apply translation (set to actual cursor position)
+            cursorEl.css({
+                transform : 'translate('+ x + 'px, ' + y + 'px)'
+            });
+
+
+
+            var half_point = $(window).width() / 2;
+
+            if(x >= half_point )
+            {
+                var rotate_angle =  360;
+                cursorImageEl.css({
+                    transform : 'rotate('+ rotate_angle + 'deg)'
+                });
+            }
+            else
+            {
+                var rotate_angle =   180;
+                cursorImageEl.css({
+                    transform : 'rotate('+ rotate_angle + 'deg)'
+                });
+            }
+        }).mouseout(function(){
+
+            var cursorEl = $('#banner_cursor');
+            // Apply reset translation
+            cursorEl.css({
+                transform : ''
+            });
+
+        });
+        $('.hero-banner .banner-content a').hover(
+            function () {
+                $('#banner_cursor').hide();
+            },
+            function () {
+                $('#banner_cursor').show();
+            }
+        );
+
     });
+
 </script>
 
 <!-- =============== HERO BANNER =============== -->
-<div class="hero-banner" style="background: url('<?php the_field('home_hero_banner_image', $hm_id); ?>');">
-    <div class="container">
-       <?php the_field('home_hero_banner_text', $hm_id); ?> 
+<div class="hero-banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-list" id="banner-list">
+                    <?php if(get_field('home_hero_banner_image', $hm_id)): ?>
+                        <img src="<?php the_field('home_hero_banner_image', $hm_id); ?>" attr="banner 1" />
+                    <?php endif; ?>
+                    <?php if(get_field('home_hero_banner_image_2', $hm_id)): ?>
+                        <img src="<?php the_field('home_hero_banner_image_2', $hm_id); ?>" attr="banner 2" />
+                    <?php endif; ?>
+                    <?php if(get_field('home_hero_banner_image_3', $hm_id)): ?>
+                        <img src="<?php the_field('home_hero_banner_image_3', $hm_id); ?>" attr="banner 3" />
+                    <?php endif; ?>
+                </div>
+                <div id="banner_cursor"><img alt="Cursor Hand" src="/wp-content/themes/dreamseeker/img/banner_arrow.svg"></div>
+
+                <div class="banner-content">
+                    <?php the_field('home_hero_banner_text', $hm_id); ?>
+                </div>
+
+                <div class="scroll-down scroll-slow">
+                    <a href="#featured-products" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 26px;">&#8595;</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="overlay"></div> 
 </div>
-<div class="scroll-down scroll-slow">
-    <a href="#featured-products" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 26px;">&#8595;</a>
-</div> 
+
 
 <!-- =============== Featured Products =============== -->
 <div class="featured-products hm_fea" id="featured-products">

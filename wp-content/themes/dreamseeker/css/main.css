@@ -404,7 +404,7 @@ input[readonly] {
     font-family: "AvenirNextBold",sans-serif;
 }
 
-.hero-banner .container a {
+.hero-banner .banner-content a {
     font-family: 'AvenirNextBold', sans-serif;
     background: #ec7b06;
     display: inline-block;
@@ -419,18 +419,8 @@ input[readonly] {
     margin-top: 40px;
 }
 
-.hero-banner .container a:hover {
+.hero-banner .banner-content a:hover {
    /* background: #de7100;   */
-}
-
-.hero-banner .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 90;
-    background-color: rgba(0,0,0,0.2); 
 }
 
 .scroll-down {
