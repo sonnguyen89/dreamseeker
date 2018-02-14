@@ -4897,6 +4897,7 @@ hr.section-divider{
 {
     position:absolute;
     bottom: 15px;
+    left: 25px;
 }
 .hero-banner .banner-list .owl-controls .owl-pagination .owl-page .owl-numbers
 {
@@ -4904,6 +4905,7 @@ hr.section-divider{
     font-size: 26px;
     background: none;
     opacity: 0.7;
+    padding: 0;
 }
 .hero-banner .banner-list .owl-controls .owl-pagination .owl-page.active .owl-numbers
 {
@@ -4995,4 +4997,28 @@ footer .footer_main_continer  button.btn-default:hover
 .news-items ul li {
     font-size: 16px;
     padding-bottom: 7px;
+}
+
+
+.logo-wrapper {
+    background-image: none;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo-wrapper img{
+    width:180px;
+}
+.logo-wrapper .logo-img-content{
+    display: inline-block;
+    padding: 0 40px;
+}
+.logo-wrapper .logo-img-content > p
+{
+    font-family: Nobel,Arial,sans-serif;
+    color: #111;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: lighter;
 }

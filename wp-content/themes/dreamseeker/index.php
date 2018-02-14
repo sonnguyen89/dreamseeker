@@ -311,7 +311,21 @@ global $post;
 <div class="logos-home" >
     <div class="container ">
         <div class="row">
-            <div class="logo-wrapper"></div>
+            <div class="logo-wrapper">
+                <div class="logo-img-content">
+                    <img src="/wp-content/themes/dreamseeker/img/home_icons_black-01.png" alt="home icon 1"/>
+                   <p>AUSTRALIA MADE</p>
+                </div>
+                <div class="logo-img-content">
+                    <img src="/wp-content/themes/dreamseeker/img/home_icons_black-02.png" alt="home icon 2"/>
+                    <p>NATIONWIDE WARRANTY</p>
+                </div>
+                <div class="logo-img-content">
+                    <img src="/wp-content/themes/dreamseeker/img/home_icons_black-03.png" alt="home icon 3"/>
+                    <p>Satisfaction Guarantee</p>
+                </div>
+
+            </div>
         </div>
     </div> 
 </div>
