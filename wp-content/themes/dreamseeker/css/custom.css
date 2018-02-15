@@ -1841,6 +1841,8 @@ footer .firs-section .icon-ig:hover{
         margin-top: 16px;
         float: left;
         margin-left: 60px;
+        border: 1px solid transparent;
+        border-radius: 0; 
     }
 }
 @media(max-width:486px)
@@ -3833,7 +3835,7 @@ background: rgba(0,0,0,0.5);
         width: 90%;
     }
     .featured-products h2, .latest-news-home h2 {
-        font-size: 16px;
+        font-size: 20px;
         margin: 0px 14%;
         width: auto;
     }
@@ -5100,6 +5102,14 @@ footer .footer_main_continer  button.btn-default:hover
     display: inline-block;
     padding: 0 40px;
 }
+
+@media only screen and (max-width: 450px)
+{
+    .logo-wrapper .logo-img-content {
+         display: inline-block;
+         padding: 40px;
+     }
+}
 .logo-wrapper .logo-img-content > p
 {
     color: #111;
@@ -5109,4 +5119,43 @@ footer .footer_main_continer  button.btn-default:hover
 
     font-weight: 400;
     letter-spacing: 3px;
+}
+
+
+
+.icon_bb {
+    background-image: url(../img/news2.png);
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family:  Nobel,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.icon_cc {
+    background-image: url(../img/news3.png);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family:  Nobel,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.icon_aa {
+    background-image: url(../img/news1.png);
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family:  Nobel,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
