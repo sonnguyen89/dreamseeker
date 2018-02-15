@@ -2069,7 +2069,7 @@ footer .firs-section .icon-ig:hover{
     color: #000;
     top: 0;
     float: left;
-    width: 36%;
+    width: 40%;
     margin: 0 3%;
     height: auto;
 
@@ -2168,12 +2168,12 @@ footer .firs-section .icon-ig:hover{
     top: 180px;
 
 }
-@media(max-width:1360px)
+@media(max-width:1550px)
 {
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
     {
-        top: 145px;
+        top: 140px;
     }
 }
 @media(max-width:1160px)
@@ -4566,6 +4566,28 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     background-position: 50% calc(100% - 11px),0 0;
 }
 
+
+
+@media only screen and (max-width: 560px)
+{
+
+    .hero-banner .banner-content a
+    {
+        margin-top:15px;
+    }
+
+}
+@media only screen and (max-width: 450px)
+{
+    .hero-banner .banner-content a
+    {
+        border:0px;
+        margin-top:15px;
+    }
+
+}
+
+
 .hero-banner .banner-content a:hover
 {
 
@@ -4923,6 +4945,19 @@ hr.section-divider{
     background: none;
     opacity: 1;
 }
+
+@media only screen and (max-width: 450px)
+{
+    .hero-banner .banner-list .owl-controls .owl-pagination .owl-page .owl-numbers
+    {
+        font-size: 10px;
+    }
+    .hero-banner .banner-list .owl-controls .owl-pagination .owl-page.active .owl-numbers
+    {
+        font-size: 14px;
+    }
+}
+
 .hero-banner .banner-list .owl-controls .owl-buttons .owl-prev,
 .hero-banner .banner-list .owl-controls .owl-buttons .owl-next
 {
@@ -4963,11 +4998,6 @@ hr.section-divider{
         margin-top: 25px;
     }
 
-    .hero-banner .banner-content a
-    {
-        margin-top:15px;
-    }
-
     .hero-banner {
         height: auto;
         padding-top: 29px;
@@ -4979,12 +5009,6 @@ hr.section-divider{
         padding: 0;
         text-align: center;
         margin-top: 25px;
-    }
-
-    .hero-banner .banner-content a
-    {
-        display: none;
-        margin-top:15px;
     }
 
     .hero-banner {
@@ -5016,8 +5040,11 @@ hr.section-divider{
 .scroll-down
 {
     width:50px;
+    background:#000;
 }
-
+.scroll-down:hover{
+    background:#fff;
+}
 
 footer .firs-section .form-control {
     background: #fff;
@@ -5075,9 +5102,11 @@ footer .footer_main_continer  button.btn-default:hover
 }
 .logo-wrapper .logo-img-content > p
 {
-    font-family: Nobel,Arial,sans-serif;
     color: #111;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: lighter;
+
+    font-weight: 400;
+    letter-spacing: 3px;
 }

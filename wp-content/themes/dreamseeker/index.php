@@ -115,6 +115,16 @@ global $post;
             }
         );
 
+        $('.hero-banner .scroll-down').hover(
+            function(){
+                $('.hero-banner .scroll-down a img').attr('src','/wp-content/themes/dreamseeker/img/banner_down_icons_arrow_black.png');
+            },
+            function(){
+                $('.hero-banner .scroll-down a img').attr('src','wp-content/themes/dreamseeker/img/banner_down_icons_arrow_white.png');
+            }
+
+        )
+
     });
 
 </script>
