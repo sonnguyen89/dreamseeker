@@ -1676,7 +1676,7 @@ footer .firs-section .icon-ig:hover{
 .navbar-header .navbar-header-content.navbar-center
 {
     float: none;
-    margin: 0 auto;
+    margin: 10px auto;
     min-height: 99px;
     width: 1500px;
 }
@@ -1842,7 +1842,7 @@ footer .firs-section .icon-ig:hover{
         float: left;
         margin-left: 60px;
         border: 1px solid transparent;
-        border-radius: 0; 
+        border-radius: 0;
     }
 }
 @media(max-width:486px)
