@@ -446,9 +446,22 @@ function customize_main_menu_items( $args, $item, $depth  ) {
 
             $product_content .=  '</div>';
 
-            //product image
+
+            //product image for menu
+            if(get_field('menu_product_image', $_product->ID))
+            {
+                $p_image = get_field('menu_product_image', $_product->ID);
+                $image_url = $p_image['url'];
+            }
+            else
+            {
+                $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
+                $image_url = $p_image[0];
+            }
+
+
             $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
-            $image_htlm = '<img class="dropdown-image" src="'. $p_image[0].'"/>';
+            $image_htlm = '<img class="dropdown-image" src="'. $image_url.'"/>';
 
 
 
@@ -465,10 +478,21 @@ function customize_main_menu_items( $args, $item, $depth  ) {
 
         if($_product = get_post($item->object_id))
         {
-            //product image
-            $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
+            //product image for menu
+            if(get_field('menu_product_image', $_product->ID))
+            {
+                $p_image = get_field('menu_product_image', $_product->ID);
+                $image_url = $p_image['url'];
+            }
+            else
+            {
+                $p_image = wp_get_attachment_image_src(get_post_thumbnail_id($_product->ID), 'full');
+                $image_url = $p_image[0];
+            }
 
-            $image_htlm = '<p><a type="button"  class="product-find-more" href="'. $item->url . '"><img class="dropdown-image" src="'. $p_image[0].'" width="300"/></a></p>';
+
+
+            $image_htlm = '<p><a type="button"  class="product-find-more" href="'. $item->url . '"><img class="dropdown-image" src="'. $image_url.'" width="300"/></a></p>';
 
 
 

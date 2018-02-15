@@ -4899,6 +4899,16 @@ hr.section-divider{
     bottom: 15px;
     left: 25px;
 }
+@media only screen and (max-width: 450px)
+{
+    .hero-banner .banner-list .owl-controls {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
 .hero-banner .banner-list .owl-controls .owl-pagination .owl-page .owl-numbers
 {
     font-family: lr_ot4,arial,helvetica,sans-serif;
@@ -4936,6 +4946,54 @@ hr.section-divider{
     width: 100%;
     padding-left: 21%;
 }
+@media only screen and (max-width: 991px)
+{
+    .hero-banner .banner-content
+    {
+        padding: 0;
+        text-align: center;
+        margin-top: 85px;
+    }
+}
+@media only screen and (max-width: 560px)
+{
+    .hero-banner .banner-content {
+        padding: 0;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .hero-banner .banner-content a
+    {
+        margin-top:15px;
+    }
+
+    .hero-banner {
+        height: auto;
+        padding-top: 29px;
+    }
+}
+@media only screen and (max-width: 450px)
+{
+    .hero-banner .banner-content {
+        padding: 0;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .hero-banner .banner-content a
+    {
+        display: none;
+        margin-top:15px;
+    }
+
+    .hero-banner {
+        height: auto;
+        padding-top: 29px;
+    }
+}
+
+
 .hero-banner .container-fluid img{
     width:100%;
 }
@@ -5008,7 +5066,8 @@ footer .footer_main_continer  button.btn-default:hover
     text-align: center;
 }
 .logo-wrapper img{
-    width:180px;
+    width: 150px;
+    padding-bottom: 16px;
 }
 .logo-wrapper .logo-img-content{
     display: inline-block;

@@ -126,23 +126,36 @@ global $post;
             <div class="col-lg-12">
                 <div class="banner-list" id="banner-list">
                     <?php if(get_field('home_hero_banner_image', $hm_id)): ?>
-                        <img src="<?php the_field('home_hero_banner_image', $hm_id); ?>" attr="banner 1" />
+                        <div>
+                            <div class="banner-content">
+                                <?php the_field('home_hero_banner_text', $hm_id); ?>
+                            </div>
+                            <img src="<?php the_field('home_hero_banner_image', $hm_id); ?>" attr="banner 1" />
+                        </div>
                     <?php endif; ?>
                     <?php if(get_field('home_hero_banner_image_2', $hm_id)): ?>
-                        <img src="<?php the_field('home_hero_banner_image_2', $hm_id); ?>" attr="banner 2" />
+                        <div>
+                            <div class="banner-content">
+                                <?php the_field('home_hero_banner_text_2', $hm_id); ?>
+                            </div>
+                            <img src="<?php the_field('home_hero_banner_image_2', $hm_id); ?>" attr="banner 2" />
+                        </div>
                     <?php endif; ?>
                     <?php if(get_field('home_hero_banner_image_3', $hm_id)): ?>
-                        <img src="<?php the_field('home_hero_banner_image_3', $hm_id); ?>" attr="banner 3" />
+                        <div>
+                            <div class="banner-content">
+                                <?php the_field('home_hero_banner_text_3', $hm_id); ?>
+                            </div>
+                            <img src="<?php the_field('home_hero_banner_image_3', $hm_id); ?>" attr="banner 3" />
+                        </div>
                     <?php endif; ?>
                 </div>
                 <div id="banner_cursor"><img alt="Cursor Hand" src="/wp-content/themes/dreamseeker/img/banner_arrow.svg"></div>
 
-                <div class="banner-content">
-                    <?php the_field('home_hero_banner_text', $hm_id); ?>
-                </div>
+
 
                 <div class="scroll-down scroll-slow">
-                    <a href="#featured-products" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 26px;">&#8595;</a>
+                    <a href="#featured-products" ><img src="/wp-content/themes/dreamseeker/img/banner_down_icons_arrow_white.png" style="width:40px"/></a>
                 </div>
             </div>
         </div>
