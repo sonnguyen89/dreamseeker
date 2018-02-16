@@ -28,7 +28,7 @@
     display: none;
     /*    padding-left: 10px;*/
 }
-.search_icon_mobile a:active,.search_icon_mobile  a:hover,.search_icon_mobile  a:visited{
+.search_icon_mobile a,.search_icon_mobile a:active,.search_icon_mobile  a:hover,.search_icon_mobile  a:visited{
     color:#000;
 }
 .main-navigation  .navbar-nav > li.search-icon.dropdown > a{
