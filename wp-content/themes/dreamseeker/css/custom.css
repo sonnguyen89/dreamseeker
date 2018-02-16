@@ -3839,6 +3839,7 @@ background: rgba(0,0,0,0.5);
         font-size: 20px;
         margin: 0px 14%;
         width: auto;
+        letter-spacing: 1px;
     }
     .col-md-9.no_pd.left_ft {
         float: left;
