@@ -1849,7 +1849,7 @@ footer .firs-section .icon-ig:hover{
 {
     #mobile-navbar.mobile-navigation
     {
-        top: 158px;
+        top: 177px;
     }
 }
 
@@ -2221,11 +2221,12 @@ footer .firs-section .icon-ig:hover{
 .second-navbar ul.navbar-nav
 {
     float: none;
-    margin: 0 auto;
-    width: 1470px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 76%;
 }
 .second-navbar{
-    margin-top: 150px;
+    margin-top: 170px;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
     margin-left:50px;
