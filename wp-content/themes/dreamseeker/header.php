@@ -395,7 +395,7 @@
 
                 var top = $(this).height();
                 $(this).children('ul.sub-menu').css({'top':  top });
-                $(this).children('ul.sub-menu').css({'height':  $(window).height() - 200});
+                $(this).children('ul.sub-menu').css({'height':  $(window).height() - 300});
 
 
                 var selected = $(this).hasClass('mobile-active');
