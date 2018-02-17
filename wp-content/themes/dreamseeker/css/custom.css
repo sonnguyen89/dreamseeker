@@ -2231,7 +2231,15 @@ footer .firs-section .icon-ig:hover{
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
     margin-left:50px;
     /*margin-left:15px;*/
-} 
+}
+@media (max-width: 450px)
+{
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+        margin-left:10px!important;
+    }
+}
+
+
 .navbar-header.col-md-2{
     border-right:1px solid #d9d9d9;
 }
@@ -5160,4 +5168,49 @@ footer .footer_main_continer  button.btn-default:hover
     font-family:  Nobel,Arial,sans-serif;
     text-transform: uppercase;
     font-weight: bold;
+}
+.product-wheretobuy {
+    padding: 0 0 50px 0;
+    background: #ffffff;
+    color: #111;
+    text-align: center;
+}
+.product-wheretobuy h2
+{
+    font-family:Nobel,Arial,sans-serif;
+    background: #ffffff;
+    color: #111;
+
+}
+@media only screen and (max-width: 480px){
+    .product-wheretobuy h2
+    {
+        margin: 0 9%;
+    }
+}
+.product-wheretobuy .btn-primary {
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+    padding: 15px 40px;
+    margin: 0 10px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAABEREf///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
+    transition: all .3s ease-in-out 0s;
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 11px),0 0;
+    background-size: .75em 1px,100%;
+}
+.product-wheretobuy .btn-primary:hover
+{
+    background-size: 1.5em 1px,100%;
+}
+
+
+.product-wheretobuy .header-wrapper {
+    background: url(../img/header-wrapper-bg-black.png) repeat-x 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
