@@ -337,7 +337,7 @@ global $post;
             <div class="logo-wrapper">
                 <div class="logo-img-content">
                     <img src="/wp-content/themes/dreamseeker/img/home_icons_black-01.png" alt="home icon 1"/>
-                   <p>AUSTRALIA MADE</p>
+                   <p>AUSTRALIAN MADE</p>
                 </div>
                 <div class="logo-img-content">
                     <img src="/wp-content/themes/dreamseeker/img/home_icons_black-02.png" alt="home icon 2"/>
