@@ -27,21 +27,7 @@ $(document).ready(function(){
     }).bind("mouseout", function(event) {
         scrolling = false;
     });
-
-    /*jQuery(".dealer_tab_main").bind("click", function(event) {
-    event.preventDefault();
-    // Animates the scrollTop property by the specified
-    // step.
-    jQuery("#dvPanel2").animate({
-        scrollTop: "-=" + step + "px"
-    });
-}).bind("mouseover", function(event) {
-    scrolling = true;
-    scrollContent("up");
-}).bind("mouseout", function(event) {
-    scrolling = false;
-});*/
-
+    
     //auto scroll on a product page
 
     jQuery(".down_dealers_arrw").bind("click", function(event) {
@@ -299,22 +285,6 @@ $(function() {
     
 });
 
-//$("#hereus").selectBoxIt({
-//    defaultText: "Sample text here",
-//    downArrowIcon:"dropdownicon"
-//});
-//$("#hereus").selectBoxIt({
-//    defaultText: "Sample text here",
-//    downArrowIcon:"dropdownicon"
-//});
-//$("#mname").selectBoxIt({
-//    defaultText: "Model Name",
-//    downArrowIcon:"dropdownicon"
-//});
-//$("#mnumber").selectBoxIt({
-//    defaultText: "Model Type",
-//    downArrowIcon:"dropdownicon"
-//});
 
 /* Slow Scroll */
 $(function() {
@@ -325,7 +295,7 @@ $(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top-120
+                    scrollTop: target.offset().top-220
                 }, 1000);
                 //console.log(top);
                 return false;
