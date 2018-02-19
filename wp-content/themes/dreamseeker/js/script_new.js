@@ -2501,7 +2501,6 @@ jQuery(document).ready(function($) {
 
     $('.second-navbar.single_nav.navbar-inverse .navbar-second .navbar-nav > li > a').click(function()
     {
-            console.log('pass');
             $('.second-navbar.single_nav.navbar-inverse .navbar-second .navbar-nav > li').removeClass('active');
             $(this).parent('li').addClass('active');
     });

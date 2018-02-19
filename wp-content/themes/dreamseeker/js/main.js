@@ -27,7 +27,7 @@ $(document).ready(function(){
     }).bind("mouseout", function(event) {
         scrolling = false;
     });
-    
+
     //auto scroll on a product page
 
     jQuery(".down_dealers_arrw").bind("click", function(event) {

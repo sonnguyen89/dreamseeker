@@ -1568,21 +1568,44 @@ footer .firs-section .icon-ig:hover{
     padding: 26px 10px 45px;
     text-align: center;
 }
-.products-gallery .container{
-    padding-left:0;
-    padding-right:0;
-}
+
 .products-gallery .row{
     margin-left:0;
     margin-right:0;
 }
-.products-gallery .container {
+
+
+.products-gallery .gallery-container {
     overflow: hidden;
     width: 100%;
+    padding-left:0;
+    padding-right:0;
 }
 .products-gallery .container .header-wrapper h2{
     text-align:left;
     color:#000000;
+}
+.products-gallery  .container .header-wrapper {
+    background: url(../img/header-wrapper-bg-black.png) repeat-x 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.products-gallery  .container .header-wrapper h2 {
+
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-align: center;
+    width: auto;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 28%;
+
+    font-family: Nobel,Arial,sans-serif;
+    background: #ffffff;
+    color: #111;
 }
     /*new_menu*/
 #navbar.main-navigation
