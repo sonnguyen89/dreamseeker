@@ -522,8 +522,17 @@ footer .second-section .footer_main_continer .line-a, footer .second-section .fo
     margin-top: 30px;
     text-align: left;
     width: 100%;
-    font-family: "AvenirNextNormal",sans-serif;
+    font-family: Nobel,Arial,sans-serif;
     font-weight: bold;
+}
+.product-introtext p {
+    font-family: Nobel,Arial,sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    font-weight: 400;
 }
 .results-items .view-more:hover{
     opacity: 0.6;
@@ -1141,8 +1150,8 @@ select.error + span #claim_productSelectBoxIt, select.error + span #claim_modelS
     width:106%;
 }
 .al_txt {
-    color: #fff;
-    font-family: "AvenirNextUltraLight",sans-serif!important;
+    color: #111;
+    font-family: Nobel,Arial,sans-serif !important;
     font-size: 25px;
     margin: 0 auto;
     max-width: 1200px;
@@ -1406,8 +1415,16 @@ select.error + span #claim_productSelectBoxIt, select.error + span #claim_modelS
 .company-info h5{
     text-transform: capitalize;
 }
+.products-specs .panel-group {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 0px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
 .spec_panel .panel{
-    border-bottom: 1px solid #666; 
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
 }
 .spec_panel .panel:last-child{
     border-bottom: none; 
@@ -1882,9 +1899,11 @@ footer .firs-section .icon-ig:hover{
     float: right!important;
 
 }
-.spec_panel .panel-body{
+.products-specs .panel-body{
     padding-left:45px;
     padding-right:45px;
+    background: #ffffff;
+    color: #111;
 }
 .info_all{
     border-top:10px solid #000;
@@ -2522,30 +2541,25 @@ footer .second-section .container-fluid.footer_main_continer{
     width: 17px;
     background-size: contain;
 }
-/*.overlay_sld{
-      box-shadow:  13px -92px 93px #000 inset;
-      -ms-box-shadow: 13px -92px 93px #000 inset;
-      -moz-box-shadow: 13px -92px 93px #000 inset;
-      -webkit-box-shadow: 13px -92px 93px #000 inset;
-box-shadow: none;
--webkit-box-shadow: none;
--moz-box-shadow: none;
--ms-box-shadow: none;
-background: rgba(0,0,0,0.5);
-}*/
 .all_dtl{
     /*    bottom: 215px!important;*/
     float: right;
 }
 .product-introtext{
-    background:#000000;
+    background:#fff;
 }
 .product-video p,.product-introtext.sin-prd.overview p{
     font-size: 20px;
     font-family: "AvenirNextUltraLight",sans-serif;
 }
 #specifications{
-    border-top:5px solid #000000;
+    border-top:5px solid #fff;
+}
+.products-specs .header-wrapper {
+    background: url(../img/header-wrapper-bg-black.png) repeat-x 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /*jhgh*/
@@ -4147,19 +4161,35 @@ div.spec_cont_tab-tab-content{
 div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     display: none;
 }
-
-#specifications, .products-specs h2{
-    background:#000000;
-}
 .list-group{
     background:#404040;
     color:#fff;
 }
-.products-specs h2{
-    background:#000000;            
+#specifications
+{
+    background:#fff;
+}
+#specifications.products-specs h2
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-align: center;
+    width: auto;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 28%;
+    font-family: Nobel,Arial,sans-serif;
+    background: #ffffff;
+    color: #111;
 }
 .products-specs .panel-default  .panel-heading{
-    background: #000000;
+    background: #fff;
+    color: #111;
+    font-size: 20px;
+    border-radius: 0;
+    font-family: Nobel,Arial,sans-serif;
 }
 .list-group, .list-group a{
     background:#404040;
@@ -5272,4 +5302,26 @@ footer .footer_main_continer  button.btn-default:hover
     #navbar.navbar-second, .navbar.navbar-inverse.navbar-top.second-navbar.navbar-fixed-top{
         display:none!important;
     }
+}
+
+
+
+.product-layout .btn-primary
+{
+    background: #f9f9f9;
+    color: #111;
+    border: 1px solid #111;
+    padding: 15px 40px;
+    margin: 0 10px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAABEREf///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
+    transition: all .3s ease-in-out 0s;
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 11px),0 0;
+    background-size: .75em 1px,100%;
+}
+.product-video .btn-primary:hover, .product-layout .btn-primary:hover, .product-layout .btn-primary:focus, .product-brouchre .btn-primary:hover
+{
+    background-size: 1.5em 1px,100%;
 }

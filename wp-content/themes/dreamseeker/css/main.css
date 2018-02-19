@@ -1218,7 +1218,7 @@ footer .certified .certified-logo {
     letter-spacing: 3px;
 }
 .product-layout {
-    background: #a7a9ab;
+    background: #f9f9f9;
     color: #fff;
     text-align: center;
     padding: 70px 0;
@@ -1236,9 +1236,6 @@ footer .certified .certified-logo {
     padding: 15px 35px;
     margin: 0 20px ;
     letter-spacing: 3px;
-}
-.product-video .btn-primary:hover, .product-layout .btn-primary:hover, .product-layout .btn-primary:focus , .product-brouchre .btn-primary:hover {
-    background: #636262;
 }
 .products-specs {
     background: #404041;
