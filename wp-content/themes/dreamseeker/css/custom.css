@@ -1615,7 +1615,7 @@ footer .firs-section .icon-ig:hover{
 .products-gallery  .container .header-wrapper h2 {
 
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 700;
     font-size: 22px;
     letter-spacing: 3px;
     text-align: center;
@@ -4176,7 +4176,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 #specifications.products-specs h2
 {
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 700;
     font-size: 22px;
     letter-spacing: 3px;
     text-align: center;
@@ -5229,6 +5229,7 @@ footer .footer_main_continer  button.btn-default:hover
     font-family:Nobel,Arial,sans-serif;
     background: #ffffff;
     color: #111;
+    font-weight: 700;
 
 }
 @media only screen and (max-width: 480px){
