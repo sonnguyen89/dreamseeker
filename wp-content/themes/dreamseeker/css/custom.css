@@ -2291,8 +2291,10 @@ footer .firs-section .icon-ig:hover{
     cursor: pointer;
 }
 
-.footer_main_continer{
+.firs-section .footer_main_continer,
+.second-section .footer_main_continer .container{
     /*padding:0px 50px;*/
+    width:1490px;
 }
 footer .second-section .container-fluid.footer_main_continer{
     /*padding:0px 50px !important;*/

@@ -270,6 +270,21 @@
                 $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
 
 
+                var main_nav_width = $('#navbar.main-navigation > div').width();
+                var second_width = main_nav_width + 10;
+                $('.firs-section .footer_main_continer').css('width',second_width);
+                $('.second-section .footer_main_continer .container').css('width',second_width);
+
+
+                $('.second-navbar ul.navbar-nav').css('width',main_nav_width);
+
+                $( window ).resize(function(){
+                    var main_nav_width = $('#navbar.main-navigation > div').width();
+                    $('.second-navbar ul.navbar-nav').css('width',main_nav_width);
+                    var second_width = main_nav_width + 10;
+                    $('.firs-section .footer_main_continer').css('width',second_width);
+                    $('.second-section .footer_main_continer .container').css('width',second_width);
+                });
             });
         </script>
 

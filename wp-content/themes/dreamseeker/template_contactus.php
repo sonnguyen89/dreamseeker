@@ -1,177 +1,1 @@
-  <?php
-/*
-  Template Name: Contact us
- */
-get_header();
-global $post;
-$p_id = $post->ID;
-?> 
- 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-            // When the window has finished loading create our google map below
-//            google.maps.event.addDomListener(window, 'load', init);
-//        
-//            function init() {
-//                // Basic options for a simple Google Map
-//                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-//                var mapOptions = {
-//                    // How zoomed in you want the map to start at (always required)
-//                    zoom: 15,
-//                    center: new google.maps.LatLng(-37.616134, 144.942562), // sydney
-//
-//                    // How you would like to style the map. 
-//                    // This is where you would paste any style found on Snazzy Maps.
-//                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
-//                };
-//
-//                // Get the HTML DOM element that will contain your map 
-//                // We are using a div with id="map" seen below in the <body>
-//                var mapElement = document.getElementById('map');
-//
-//                // Create the Google Map using our element and options defined above
-//                var map = new google.maps.Map(mapElement, mapOptions);
-//                var iconBase = $('.path_link').val();
-//                // Let's also add a marker while we're at it
-//                var marker = new google.maps.Marker({
-//                    position: new google.maps.LatLng(-37.616134, 144.942562),
-//                    map: map,
-//                    title: 'Snazzy!',
-//                    icon: iconBase + '/img/marker.png'
-//                });
-//            }
-        </script> 
-
- <!-- Second Navigation
-    ================================================== -->
-    
- 
- <nav class="navbar navbar-inverse navbar-top second-navbar hidden-xs navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div id="navbar" class="navbar-collapse collapse navbar-second">
-            <?php wp_nav_menu(array(
-                'theme_location' => 'sub-menu-dream',
-                'menu_class'     => 'nav navbar-nav navbar-right'
-            )); ?>
-        </div>
-      </div>
-    </nav>
-   
- 
-    <!-- Contact Us  Hero Image
-    ================================================== -->
-    <div class="range-heroimg" style="background-image:url('<?php echo get_template_directory_uri() ?>/img/range-heroimg.jpg');">
-        <div class="container ">
-            <div class="row">
-                <h1>Contact Us</h1>
-            </div>
-        </div> 
-    </div>
-    
-    <div class="contact-us">
-        <div class="container-fluid ">
-            <div class="row">
-                <div class="col-md-8 contact-left">
-                        <input class="path_link" type="hidden" value="<?php echo bloginfo('template_url'); ?>"/>
-                    <div class="col-md-12">
-                        <h2>Enquiry</h2>
-                    </div>
-                    <form class="cont_frm">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input_val f_name" id="f_name" placeholder="First Name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input_val l_name" id="l_name" placeholder="Last Name">
-                        </div>
-                        <div class="form-group col-md-12">
-                            <input type="email" class="form-control input_val email1" id="email1" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="phone" class="form-control input_val phone" id="phone" placeholder="Phone">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input_val p_code" id="p_code" placeholder="Postcode">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input_val chasy_no" id="chasy_no" placeholder="Chassis Number">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input_val dealer" id="dealer" placeholder="Dealer">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <select name="test1" class="form-control hereus1" id="hereus">
-                              <?php if(get_field('how_did_you_hear_about_us_options',$p_id) !=''){ 
-                                   $hhr = get_field('how_did_you_hear_about_us_options',$p_id);                       
-                            if ($hhr) {
-                                $i = 1;
-                            foreach ($hhr as $hhrs) {
-                                   ?>
-                                <option value="<?php echo $hhrs['option_b']; ?>"><?php echo $hhrs['option_b']; ?></option>
-                            <?php }}} ?>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <select name="test2" class="form-control hereus2" id="hereus2" >
-                                 <?php if(get_field('general_options',$p_id) !=''){ 
-                                   $gen = get_field('general_options',$p_id);                       
-                            if ($gen) {
-                                $i = 1;
-                            foreach ($gen as $gens) {
-                                   ?>
-                                <option value="<?php echo $gens['option_a']; ?>"><?php echo $gens['option_a']; ?></option>
-                            <?php }}} ?>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <button type="submit" class="btn btn-default send_mail">Submit</button>
-                        </div>
-                        <div class="col-md-6 load_cont_btn">
-                            <div class="loading_btn"></div>
-                            <div class="loaded_btn"></div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-4 contact-right">
-                    <h2>CONTACT US</h2>
-                    <?php
-                        $rows = get_field('contact_us_section' );
-                       
-                        ?>
-                    <div class="contact-itm">                        
-                        <h5><?php echo $rows[0]['section_title']; ?></h5>
-                        <?php echo $rows[0]['section_content']; ?>
-                    </div>
-                    <div class="contact-itm">
-                        <h5><?php echo $rows[1]['section_title']; ?></h5>
-                         <?php echo $rows[1]['section_content']; ?>
-                    </div>
-                    <div class="contact-itm">
-                         <h5><?php echo $rows[2]['section_title']; ?></h5>
-                        <?php echo $rows[2]['section_content']; ?>
-                    </div>
-                </div>
-             </div>
-        </div>
-    </div>
-    
-    <!-- Locate us on Map
-    ================================================== -->
-<!--    <div class="range-viewmore" >
-        <div class="container ">
-            <div class="row scroll viewmore_main_row">
-                <a href="#" class="uppercase">LOCATE US ON MAP &nbsp; 
-                    <i class="fa fa-angle-down fa-2x"></i>
-                </a>
-                <span class="view_more_wrp"> <i class="dropdownicon_viewmore"></i></span>
-            </div>
-        </div> 
-    </div>-->
-    
-     <!-- Location Map
-    ================================================== -->
-<!--    <div class="location-map" >
-       <div id="map"></div>
-    </div>-->
-<?php
-get_footer();
-?>
+  <?php/*  Template Name: Contact us */get_header();global $post;$p_id = $post->ID;?>  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>    <script type="text/javascript">            // When the window has finished loading create our google map below//            google.maps.event.addDomListener(window, 'load', init);//        //            function init() {//                // Basic options for a simple Google Map//                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions//                var mapOptions = {//                    // How zoomed in you want the map to start at (always required)//                    zoom: 15,//                    center: new google.maps.LatLng(-37.616134, 144.942562), // sydney////                    // How you would like to style the map. //                    // This is where you would paste any style found on Snazzy Maps.//                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]//                };////                // Get the HTML DOM element that will contain your map //                // We are using a div with id="map" seen below in the <body>//                var mapElement = document.getElementById('map');////                // Create the Google Map using our element and options defined above//                var map = new google.maps.Map(mapElement, mapOptions);//                var iconBase = $('.path_link').val();//                // Let's also add a marker while we're at it//                var marker = new google.maps.Marker({//                    position: new google.maps.LatLng(-37.616134, 144.942562),//                    map: map,//                    title: 'Snazzy!',//                    icon: iconBase + '/img/marker.png'//                });//            }        </script>  <!-- Second Navigation    ================================================== -->      <nav class="navbar navbar-inverse navbar-top second-navbar hidden-xs navbar-fixed-top" role="navigation">      <div class="container-fluid">        <div id="navbar" class="navbar-collapse collapse navbar-second">            <?php wp_nav_menu(array(                'theme_location' => 'sub-menu-dream',                'menu_class'     => 'nav navbar-nav'            )); ?>        </div>      </div>    </nav>        <!-- Contact Us  Hero Image    ================================================== -->    <div class="range-heroimg" style="background-image:url('<?php echo get_template_directory_uri() ?>/img/range-heroimg.jpg');">        <div class="container ">            <div class="row">                <h1>Contact Us</h1>            </div>        </div>     </div>        <div class="contact-us">        <div class="container-fluid ">            <div class="row">                <div class="col-md-8 contact-left">                        <input class="path_link" type="hidden" value="<?php echo bloginfo('template_url'); ?>"/>                    <div class="col-md-12">                        <h2>Enquiry</h2>                    </div>                    <form class="cont_frm">                        <div class="form-group col-md-6">                            <input type="text" class="form-control input_val f_name" id="f_name" placeholder="First Name">                        </div>                        <div class="form-group col-md-6">                            <input type="text" class="form-control input_val l_name" id="l_name" placeholder="Last Name">                        </div>                        <div class="form-group col-md-12">                            <input type="email" class="form-control input_val email1" id="email1" placeholder="Email">                        </div>                        <div class="form-group col-md-6">                            <input type="phone" class="form-control input_val phone" id="phone" placeholder="Phone">                        </div>                        <div class="form-group col-md-6">                            <input type="text" class="form-control input_val p_code" id="p_code" placeholder="Postcode">                        </div>                        <div class="form-group col-md-6">                            <input type="text" class="form-control input_val chasy_no" id="chasy_no" placeholder="Chassis Number">                        </div>                        <div class="form-group col-md-6">                            <input type="text" class="form-control input_val dealer" id="dealer" placeholder="Dealer">                        </div>                        <div class="form-group col-md-6">                            <select name="test1" class="form-control hereus1" id="hereus">                              <?php if(get_field('how_did_you_hear_about_us_options',$p_id) !=''){                                    $hhr = get_field('how_did_you_hear_about_us_options',$p_id);                                                   if ($hhr) {                                $i = 1;                            foreach ($hhr as $hhrs) {                                   ?>                                <option value="<?php echo $hhrs['option_b']; ?>"><?php echo $hhrs['option_b']; ?></option>                            <?php }}} ?>                            </select>                        </div>                        <div class="form-group col-md-6">                            <select name="test2" class="form-control hereus2" id="hereus2" >                                 <?php if(get_field('general_options',$p_id) !=''){                                    $gen = get_field('general_options',$p_id);                                                   if ($gen) {                                $i = 1;                            foreach ($gen as $gens) {                                   ?>                                <option value="<?php echo $gens['option_a']; ?>"><?php echo $gens['option_a']; ?></option>                            <?php }}} ?>                            </select>                        </div>                        <div class="form-group col-md-6">                            <button type="submit" class="btn btn-default send_mail">Submit</button>                        </div>                        <div class="col-md-6 load_cont_btn">                            <div class="loading_btn"></div>                            <div class="loaded_btn"></div>                        </div>                    </form>                </div>                <div class="col-md-4 contact-right">                    <h2>CONTACT US</h2>                    <?php                        $rows = get_field('contact_us_section' );                                               ?>                    <div class="contact-itm">                                                <h5><?php echo $rows[0]['section_title']; ?></h5>                        <?php echo $rows[0]['section_content']; ?>                    </div>                    <div class="contact-itm">                        <h5><?php echo $rows[1]['section_title']; ?></h5>                         <?php echo $rows[1]['section_content']; ?>                    </div>                    <div class="contact-itm">                         <h5><?php echo $rows[2]['section_title']; ?></h5>                        <?php echo $rows[2]['section_content']; ?>                    </div>                </div>             </div>        </div>    </div>        <!-- Locate us on Map    ================================================== --><!--    <div class="range-viewmore" >        <div class="container ">            <div class="row scroll viewmore_main_row">                <a href="#" class="uppercase">LOCATE US ON MAP &nbsp;                     <i class="fa fa-angle-down fa-2x"></i>                </a>                <span class="view_more_wrp"> <i class="dropdownicon_viewmore"></i></span>            </div>        </div>     </div>-->         <!-- Location Map    ================================================== --><!--    <div class="location-map" >       <div id="map"></div>    </div>--><?phpget_footer();?>
