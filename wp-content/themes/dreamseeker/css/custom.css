@@ -1439,12 +1439,16 @@ select.error + span #claim_productSelectBoxIt, select.error + span #claim_modelS
 }
 .panel-heading .accordion-toggle::after {
     background-image: url("../img/sprite.png");
-    background-position: -105px -226px;
+    background-position: -105px -271px;
     content: "";
     display: block;
     float: right;
     height: 15px;
     width: 15px;
+}
+.panel-heading .accordion-toggle.collapsed:after
+{
+    background-position: -85px -271px;
 }
 *::before, *::after {
     box-sizing: border-box;
