@@ -1774,7 +1774,7 @@ footer .firs-section .icon-ig:hover{
     #mobile-navbar.mobile-navigation
     {
         position: fixed;
-        top: 177px;
+        top: 187px;
         left: -100%;
         width: 100%;
         height:100%;
@@ -5271,7 +5271,7 @@ footer .footer_main_continer  button.btn-default:hover
     margin-bottom: 0;
     color: #111;
 
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #d9d9d9;
     font-size: 14px;
     padding: 15px 45px;
     text-transform: uppercase;
@@ -5285,14 +5285,6 @@ footer .footer_main_continer  button.btn-default:hover
 }
 
 
-.second-navbar #navbar  input[type="checkbox"]:checked ~ ul.navbar-nav
-{
-    height: 100%;
-    transform-origin: top;
-    transition: transform .2s ease-out;
-    transform: scaleY(1);
-}
-
 
 
 @media (max-width: 800px){
@@ -5300,6 +5292,19 @@ footer .footer_main_continer  button.btn-default:hover
     .second-navbar #navbar .product-list-toggle-label
     {
         display: block;
+        cursor: pointer;
+    }
+    .second-navbar #navbar .product-list-toggle-label .arrow
+    {
+        width: 25px;
+        right: 35px;
+        position: absolute;
+        transition: transform .2s ease;
+    }
+    .second-navbar #navbar  input[type="checkbox"]:checked ~ .product-list-toggle-label img.arrow
+    {
+        transition: transform .2s ease;
+        transform: rotate(-180deg);
     }
 
     .second-navbar #navbar ul.navbar-nav,
@@ -5310,12 +5315,24 @@ footer .footer_main_continer  button.btn-default:hover
         float: none;
     }
 
+    .second-navbar #navbar  input[type="checkbox"]:checked ~ ul.navbar-nav
+    {
+        height: 100%;
+        transform-origin: top;
+        transition: transform .2s ease-out;
+        transform: scaleY(1);
+    }
+
+
     .second-navbar #navbar  input[type="checkbox"] ~ ul.navbar-nav
     {
         height:0;
         transform: scaleY(0);
         transition: transform .2s ease-in;
         margin-top:0;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d9d9d9;
     }
 
     .second-navbar #navbar ul.navbar-nav li a{
@@ -5351,8 +5368,9 @@ footer .footer_main_continer  button.btn-default:hover
 }
 @media (max-width: 800px) {
     #navbar.navbar-second, .navbar.navbar-inverse.navbar-top.second-navbar.navbar-fixed-top{
-      /*  display:none;*/
         background: #fff;
+        border-top: none;
+        border-bottom: none;
     }
 }
 
