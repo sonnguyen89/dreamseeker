@@ -272,11 +272,14 @@
 
                 var main_nav_width = $('#navbar.main-navigation > div').width();
 
+                if($(window).width() > 1053 )
+                {
+                    $('.second-navbar ul.navbar-nav').css('width',main_nav_width);
+                }
 
 
                 if($(window).width() > 800 )
                 {
-                    $('.second-navbar ul.navbar-nav').css('width',main_nav_width);
                     var second_width = main_nav_width + 10;
                     $('.firs-section .footer_main_continer').css('width',second_width);
                     $('.second-section .footer_main_continer .container').css('width',second_width);
@@ -284,10 +287,12 @@
 
                 $( window ).resize(function(){
                     var main_nav_width = $('#navbar.main-navigation > div').width();
-                    if($(window).width() > 800 )
+                    if($(window).width() > 1053 )
                     {
                         $('.second-navbar ul.navbar-nav').css('width',main_nav_width);
-
+                    }
+                    if($(window).width() > 800 )
+                    {
                         var second_width = main_nav_width + 10;
                         $('.firs-section .footer_main_continer').css('width',second_width);
                         $('.second-section .footer_main_continer .container').css('width',second_width);
