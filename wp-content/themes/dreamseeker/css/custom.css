@@ -3435,10 +3435,6 @@ footer .second-section .container-fluid.footer_main_continer{
     .range-introtext {
         padding: 20px 15px;
     }
-    .navbar.navbar-inverse.navbar-top.second-navbar.navbar-fixed-top{
-        display:block!important;
-        margin-top:67px!important;
-    }
     nav #navbar-secondary{
         display:block!important;
         border:none!important;
@@ -3479,23 +3475,8 @@ footer .second-section .container-fluid.footer_main_continer{
         margin-left:0!important;
         margin-right:0!important;
     }
-    .second-navbar #navbar.navbar-second ul{
-        float:right;
-        width:auto;
-        margin-top:0px!important;
-        margin-bottom:0px!important;
-    }
-    .second-navbar #navbar.navbar-second ul li{
-        float:left;
-        width:auto;
-    }
     #scroll_here .container {
         max-width: 290px;
-    }
-    .second-navbar #navbar.navbar-second ul li a{
-        padding:12px 35px;
-        margin-top:0px!important;
-        margin-bottom:0px!important;
     }
     #navbar.navbar-second {
         margin-top: 22px !important;
@@ -5271,12 +5252,22 @@ footer .footer_main_continer  button.btn-default:hover
     margin-top: 170px;
 }
 
-.second-navbar ul.navbar-nav
+.second-navbar #navbar ul.navbar-nav
 {
     float: none;
     margin-right: auto;
     margin-left: auto;
     width: 76%;
+
+}
+
+
+@media (max-width: 800px){
+    .second-navbar #navbar ul.navbar-nav,
+    .second-navbar #navbar ul.navbar-nav li
+    {
+        padding:0;
+    }
 }
 
 .second-navbar .navbar-collapse
@@ -5305,9 +5296,9 @@ footer .footer_main_continer  button.btn-default:hover
     color: #111 !important;
     border-bottom: 1px solid #d9d9d9;
 }
-@media (max-width: 777px) {
+@media (max-width: 800px) {
     #navbar.navbar-second, .navbar.navbar-inverse.navbar-top.second-navbar.navbar-fixed-top{
-        display:none!important;
+        display:none;
     }
 }
 
