@@ -534,6 +534,14 @@ footer .second-section .footer_main_continer .line-a, footer .second-section .fo
     text-align: center;
     font-weight: 400;
 }
+@media (max-width: 800px)
+{
+    .product-introtext p br
+    {
+        display: none;
+    }
+}
+
 .results-items .view-more:hover{
     opacity: 0.6;
 }
