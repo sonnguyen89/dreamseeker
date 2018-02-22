@@ -198,53 +198,7 @@
 .findyour a p{
     color:#ffffff;
 }
-.filters .searchclear.dealer_m_serch {
-    background-color: #000;
-    background-image: url("../img/sprite.png");
-    background-position: -28px -173px;
-    margin: 0;
-    padding: 15px 20px;
-}
 
-.dealer_name_label{
-    float: left;
-    padding-right: 5px;
-}
-.dealer_select_wraper{
-    float: left;
-    background: url(../img/down_arr.png) top right no-repeat #dfe0df ;
-    width: 230px;
-    overflow: hidden;
-}
-.dealer_select_wraper:hover{
-    cursor: pointer;
-}
-.dealer_select_wraper .form-control:hover{
-    cursor:pointer;
-}
-.dealer_select_wraper .form-control{
-    background-color:transparent;
-    min-width: 250px;
-    text-transform: uppercase;
-    padding: 8px;
-}
-.dealer-filter .form-control {
-    min-width: 248px;
-}
-.dealer_select_wraper option{
-    /*float:left;*/
-    width:100%;
-    padding:8px;
-    background:#a7a9ab;
-    border-radius:0px!important;
-    -moz-border-radius:0px!important;
-    -webkit-border-radius:0px!important;
-    min-height:25px;
-    border-bottom:1px solid #323132;
-}
-.dealer_select_wraper option:last-child{
-    border-bottom:none;
-}
 select{
     border-radius:0!important;
     border:none;
@@ -2295,6 +2249,8 @@ footer .firs-section .icon-ig:hover{
 {
     margin-top: 150px;
 }
+
+
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
     margin-left:50px;
     /*margin-left:15px;*/
@@ -4356,10 +4312,6 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     background: linear-gradient(181deg, rgba(247,243,243,0) 0%, rgba(67,63,63,1) 100%)!important;    
 }
 
-.dealer-filter .form-group, .dealer-filter .btn-default{
-    margin-left: 36px;
-    margin-right: 149px;
-}
 
 .range-heroimg h1{
     margin: 124px 50% 0 3%;
@@ -5462,8 +5414,6 @@ footer .footer_main_continer  button.btn-default:hover
     text-align: center;
 }
 
-
-
 .product-brouchre .btn-primary {
     background: #f9f9f9;
     color: #111;
@@ -5481,4 +5431,99 @@ footer .footer_main_continer  button.btn-default:hover
 .product-brouchre .btn-primary:hover {
     color: #111;
     background-size: 1.5em 1px,100%;
+}
+
+.range-heroimg.deal_heroimg
+{
+    font-family: Nobel,Arial,sans-serif;
+    background-color: #111;
+    margin-top: 150px;
+}
+
+
+.filters.dealer-filter{
+    background: #fff;
+    padding: 40px 0;
+}
+
+.finddealer {
+    background: #fff;
+    padding: 10px 0 0;
+}
+
+.filters .searchclear.dealer_m_serch {
+    background-color: #000;
+    background-image: url("../img/sprite.png");
+    background-position: -28px -173px;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.dealer-filter .form-group, .dealer-filter .btn-default{
+    margin-left: 36px;
+
+    font-family: "Maven Pro", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+
+.dealer-filter .btn-default
+{
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==),url(data:image/gif;base64,R0lGODlhAQABAPAAABEREf///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
+    background-size: .5em 1px,100%;
+    transition: all .3s ease-in-out 0s;
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 8px),0 0;
+}
+.dealer-filter .btn-default:hover,
+.dealer-filter .btn-default:focus
+{
+    background-size: 1em 1px,100%;
+}
+
+.dealer_name_label{
+    float: left;
+    padding-right: 5px;
+}
+.dealer_select_wraper{
+    float: left;
+    background: url(../img/down_arr.png) top right no-repeat #dfe0df ;
+    width: 230px;
+    overflow: hidden;
+}
+.dealer_select_wraper:hover{
+    cursor: pointer;
+}
+.dealer_select_wraper .form-control:hover{
+    cursor:pointer;
+}
+.dealer_select_wraper .form-control{
+    background-color:transparent;
+    min-width: 250px;
+    text-transform: uppercase;
+    padding: 8px;
+}
+.dealer-filter .form-control {
+    min-width: 300px;
+    background-color: #fff;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+}
+.dealer_select_wraper option{
+    /*float:left;*/
+    width:100%;
+    padding:8px;
+    background:#a7a9ab;
+    border-radius:0px!important;
+    -moz-border-radius:0px!important;
+    -webkit-border-radius:0px!important;
+    min-height:25px;
+    border-bottom:1px solid #323132;
+}
+.dealer_select_wraper option:last-child{
+    border-bottom:none;
 }
