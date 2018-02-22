@@ -1184,11 +1184,6 @@ footer .certified .certified-logo {
     overflow: hidden;
     background: #000;
 }
-.product-video img:hover {
-    cursor: pointer;
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
-}
 .product-layout img{
     width: 100%;
     max-width: 800px;
