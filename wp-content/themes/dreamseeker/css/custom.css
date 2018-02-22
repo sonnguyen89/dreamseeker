@@ -1075,9 +1075,6 @@ select.error + span #claim_productSelectBoxIt, select.error + span #claim_modelS
 .search_list .pull-right{
     margin-top:25px;
 }
-.news_video_image img{
-    cursor:pointer;   
-}
 .product-img-caption p a:hover{
     color:#ffffff;
 }
@@ -1409,13 +1406,30 @@ select.error + span #claim_productSelectBoxIt, select.error + span #claim_modelS
 .results-items.EqHeightDiv.nopadding.col-sm-12.min_hh {
     height: auto!important;
 }
-/*.rangesin-menu{
-    height:50px;
-}*/
-.news_video_image{
+.product-video {
+    background: #000;
+    color: #fff;
+}
+.product-video .container{
+
+}
+.product-video .news_video_image .extra-padding {
+    padding: 10px;
+}
+.product-video .news_video_image{
     background: #000 none repeat scroll 0 0;
-    max-width: 815px;
     padding-right: 0;
+    text-align: center;
+}
+@media(max-width:1345px){
+    .product-video .news_video_image {
+        padding-left:0!important;
+    }
+}
+.product-video .news_video_image img{
+    cursor: pointer;
+    width: 90%;
+    margin: 16px auto;
 }
 .products-gallery .bx-pager{
     display:none;
@@ -2727,14 +2741,6 @@ footer .second-section .container-fluid.footer_main_continer{
         width: auto;
     }
 }
-@media(max-width:1345px){
-    #menu-menu-1.nav.navbar-nav.navbar-center li {
-        width: auto;
-    }
-    .product-video .news_video_image {
-        padding-left:0!important;
-    }
-}
 @media(max-width:1235px){
     .search_inpu .ui-widget {
         width: 94.9%;
@@ -2951,9 +2957,7 @@ footer .second-section .container-fluid.footer_main_continer{
         padding-top:0!important;
         padding-bottom:0!important;
     }
-    .news_video_image{
-        margin-bottom:20px!important;
-    }
+
     .overlay_sld1{
         bottom: -51px !important;
     }
@@ -5441,7 +5445,7 @@ footer .footer_main_continer  button.btn-default:hover
     background-color: #000;
     margin-top: 15px;
 }
-.product-video .btn-primary:hover, .product-layout .btn-primary:hover, .product-layout .btn-primary:focus, .product-brouchre .btn-primary:hover
+.product-video .btn-primary:hover, .product-layout .btn-primary:hover, .product-layout .btn-primary:focus
 {
     background-color: #404041;
 

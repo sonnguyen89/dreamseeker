@@ -1172,10 +1172,6 @@ footer .certified .certified-logo {
     background: #404041;
     color: #fff;
 }
-.product-video .container  {
-    width: 100%;
-    padding-left: 0;
-}
 .fe_tltl{
     margin-top:0
 }
@@ -1193,7 +1189,7 @@ footer .certified .certified-logo {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
 }
-.product-video img, .product-layout img{
+.product-layout img{
     width: 100%;
     max-width: 800px;
 }
