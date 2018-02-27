@@ -73,50 +73,10 @@
 </footer>
 
 <a href="#0" class="cd-top">Top</a>
-<!--<div class="search_big mk-fullscreen-search-overlay mk-fullscreen-search-overlay-show">
-                                <i class="mk-fullscreen-close glyphicon glyphicon-remove"></i>
-                                <div id="mk-fullscreen-search-wrapper">
-                                        <p>Start typing and press Enter to search</p>
-                                        <form action="#" id="mk-fullscreen-searchform" method="get">
-                        <input type="text"  name="s" value="">
-                        <i class="mk-icon-search fullscreen-search-icon"><input type="submit" value=""></i>
-                            </form>                                        
-                                        <form role="search" method="get" id="searchform" class="searc" action="<?php // echo home_url('/');  ?>">
-                                <div class="ui-widget">
-                                    <i class="mk-icon-search fullscreen-search-icon"> <input type="submit" id="searchsubmit" value=""  class="search_btn"/></i>
-                                    <input id="tags" type="text" class="search_input"  value="" name="s"   placeholder="Search Here"/>
-                                    
-                                </div>
-                                </form>
-                                </div>
-                        </div>-->
-<!--<div class="search_big mk-fullscreen-search-overlay mk-fullscreen-search-overlay-show">
-                                <i class="mk-fullscreen-close glyphicon glyphicon-remove"></i>
-                                <div id="mk-fullscreen-search-wrapper">
-                                        <p>Start typing and press Enter to search</p>
-                                        <form role="search" method="get" id="searchform" class="searc" action="<?php // echo home_url('/');  ?>">
-                                <div class="ui-widget">
-                                    <i class="mk-icon-search fullscreen-search-icon"> <input type="submit" id="searchsubmit" value=""  class="search_btn"/></i>
-                                    <input id="tags" type="text" class="search_input"  value="" name="s"   placeholder="Search Here"/>
-                                    
-                                </div>
-                                </form>
-                                </div>
-                        </div>-->
 
-<script type="text/javascript">
-//    jQuery(document).ready(function() {
-//        var newHeight = jQuery(window).height() -90;
-//        //console.log(newHeight);
-//        jQuery(".html * .ls-container img, body * .ls-container img, #ls-global * .ls-container img").css("height", newHeight);
-//    });
-//    
-//    jQuery(window).resize(function(){
-//        var newHeight2 = jQuery(window).height() -90;
-//        //console.log(newHeight);
-//        jQuery(".html * .ls-container img, body * .ls-container img, #ls-global * .ls-container img").css("height", newHeight2);
-//    });
 
-</script>
+<!-- wordpress Footer wp_footer() -->
+<?php wp_footer(); ?>
+
 </body>
 </html>
