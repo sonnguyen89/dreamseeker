@@ -5635,3 +5635,15 @@ footer .footer_main_continer  button.btn-default:hover
 {
     background-size: 1em 1px,100%;
 }
+#wpsl-stores .wpsl-more-info-listings p
+{
+    margin: 0 0 10px;
+}
+#wpsl-stores .wpsl-store-hours {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#wpsl-stores .wpsl-store-location p.more_info_button
+{
+    margin: 0 0 10px;
+}

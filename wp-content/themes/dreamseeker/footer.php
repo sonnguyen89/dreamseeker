@@ -12,10 +12,10 @@
                 ?>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="social-icons">
-                        <a class="s-icons icon-fb" href="<?php cedo_get_option('cedo_fb_link') ?>"></a>
-                        <a class="s-icons icon-tw" href="<?php cedo_get_option('cedo_tw_link') ?>"></a>
-                        <a class="s-icons icon-yt" href="<?php cedo_get_option('cedo_yt_link') ?>"></a>
-                        <a class="s-icons icon-ig" href="<?php cedo_get_option('cedo_ins_link') ?>"></a>
+                        <a class="s-icons icon-fb" href="<?php echo cedo_get_option('cedo_fb_link') ?>"></a>
+                        <a class="s-icons icon-tw" href="<?php echo cedo_get_option('cedo_tw_link') ?>"></a>
+                        <a class="s-icons icon-yt" href="<?php echo cedo_get_option('cedo_yt_link') ?>"></a>
+                        <a class="s-icons icon-ig" href="<?php echo cedo_get_option('cedo_ins_link') ?>"></a>
                     </div>
                     <h4>Newsletter</h4>
                     <form>
