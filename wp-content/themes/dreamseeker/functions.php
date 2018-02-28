@@ -664,3 +664,15 @@ function custom_result_sort( $store_meta ) {
 
     return $store_meta;
 }
+
+
+add_filter( 'wpsl_marker_props', 'custom_marker_props' );
+
+function custom_marker_props( $marker_props ) {
+
+    $marker_props['scaledSize'] = '40,51'; // Set this to 50% of the original size
+    $marker_props['origin'] = '0,0';
+    $marker_props['anchor'] = '20,51';
+
+    return $marker_props;
+}
