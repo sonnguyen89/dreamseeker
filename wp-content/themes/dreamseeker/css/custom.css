@@ -5647,3 +5647,13 @@ footer .footer_main_continer  button.btn-default:hover
 {
     margin: 0 0 10px;
 }
+#wpsl-stores  .wpsl-store-location .store-location-detail
+{
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+#wpsl-wrap #wpsl-result-list ul li:hover
+{
+    background-color: #eee;
+}

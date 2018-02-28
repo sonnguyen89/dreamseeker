@@ -546,14 +546,13 @@ function custom_templates( $templates ) {
 
 add_filter( 'wpsl_listing_template', 'custom_locator_listing_template' );
 
-
 function custom_locator_listing_template()
 {
     global $wpsl, $wpsl_settings;
 
     $listing_template = '<li data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= "\t\t" . '<div class="wpsl-store-location">' . "\r\n";
-    $listing_template .= "\t\t\t" . '<p><%= thumb %>' . "\r\n";
+    $listing_template .= "\t\t\t" . '<p class="store-location-detail"><%= thumb %>' . "\r\n";
     $listing_template .= "\t\t\t\t" . wpsl_store_header_template( 'listing' ) . "\r\n"; // Check which header format we use
     $listing_template .= "\t\t\t\t" . '<span class="wpsl-street"><%= address %></span>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
@@ -647,4 +646,21 @@ function custom_more_info_template()
 
         return $more_info_template;
     }
+}
+
+
+//sort the dealer location by dealer name
+add_filter( 'wpsl_store_data', 'custom_result_sort' );
+
+function custom_result_sort( $store_meta ) {
+
+    $custom_sort = array();
+
+    foreach ( $store_meta as $key => $row ) {
+        $custom_sort[$key] = $row['store'];
+    }
+
+    array_multisort( $custom_sort, SORT_ASC, SORT_REGULAR, $store_meta );
+
+    return $store_meta;
 }
