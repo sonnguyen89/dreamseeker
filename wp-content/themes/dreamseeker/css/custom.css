@@ -5533,15 +5533,11 @@ footer .footer_main_continer  button.btn-default:hover
     font-family: Nobel,Arial,sans-serif;
     background-color: #111;
     margin-top: 170px;
-
-
     width: 100%;
-    height: 250px;
+    height: 346px;
     text-align: center;
-
-
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center -233px;
 }
 
 .dealer_heading .container h1
