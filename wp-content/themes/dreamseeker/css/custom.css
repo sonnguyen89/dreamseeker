@@ -2149,7 +2149,7 @@ footer .firs-section .icon-ig:hover{
     }
 }
 
-@media(max-width:1160px)
+@media(max-width:1260px)
 {
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-content
     {
@@ -2206,9 +2206,17 @@ footer .firs-section .icon-ig:hover{
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
     {
-        top: 140px;
+        top: 170px;
+    }
+}@media(max-width:1260px)
+{
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
+    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
+    {
+        top: 80px;
     }
 }
+
 @media(max-width:1160px)
 {
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
