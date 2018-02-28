@@ -433,8 +433,16 @@ function customize_main_menu_items( $args, $item, $depth  ) {
 
             if ($sz_ft != '' || $sz_inch != '')
             {
-                $product_content .= '<div class="product-size"><span class="size_wr"><span class="size_img"></span>'. $sz_ft .'\'' . $sz_inch . '"' .'</span> </div>';
-
+                $product_content .= '<div class="product-size"><span class="size_wr"><span class="size_img"></span>';
+                if ($sz_ft != '')
+                {
+                    $product_content .=  $sz_ft .'\'' ;
+                }
+                if($sz_inch != '')
+                {
+                    $product_content .= $sz_inch . '"';
+                }
+                $product_content .= '</span> </div>';
 
             }
             if ($occ != '')
