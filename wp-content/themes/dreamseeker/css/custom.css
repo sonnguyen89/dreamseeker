@@ -5650,7 +5650,9 @@ footer .footer_main_continer  button.btn-default:hover
 }
 #wpsl-stores
 {
+    cursor: none;
     overflow-y: scroll !important;
+
 }
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -5679,8 +5681,14 @@ footer .footer_main_continer  button.btn-default:hover
     margin: 0 0 10px;
 }
 
-#wpsl-stores .arrow{
-    position: absolute;
+.dealer_container .dealer_cursor{
+
+    width: 25px;
+    position: fixed;
+    pointer-events: none;
+    top:0;
+}
+.dealer_container .dealer_cursor img{
     transition: transform .2s ease;
     width: 25px;
 }
