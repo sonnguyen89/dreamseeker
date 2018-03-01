@@ -646,12 +646,6 @@ a.ftc{
     z-index: 99;
 }
 .overlay_sld {
-    /*    bottom: 0;
-        box-shadow: 0 -71px 69px #161617 inset;
-        height: 135px;
-        left: 0;
-        position: absolute;
-        width: 100%;*/
     bottom: 0;
     /*    box-shadow: 35px 171px 86px 37px #161617 inset ;*/
     height: 290px;
@@ -5565,8 +5559,13 @@ footer .footer_main_continer  button.btn-default:hover
 {
     padding-top: 82px;
     color: #111;
+    padding-bottom: 82px;
 }
 
+.dealer_container .container
+{
+    border-bottom: 1px dotted #999;
+}
 #wpsl-wrap .wpsl-search
 {
     color:#111;
@@ -5574,11 +5573,17 @@ footer .footer_main_continer  button.btn-default:hover
     background:#fff;
     border-bottom: 1px dotted #999;
 
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    padding-bottom: 60px;
 }
 #wpsl-wrap .wpsl-search #wpsl-search-wrap
 {
     text-align: center;
     float:none;
+    display: inline-block;
+    width: auto;
 }
 .wpsl-info-window a,
 .wpsl-store-location p,
