@@ -5683,14 +5683,14 @@ footer .footer_main_continer  button.btn-default:hover
 
 .dealer_container .dealer_cursor{
 
-    width: 25px;
+    width: 40px;
     position: fixed;
     pointer-events: none;
     top:0;
 }
 .dealer_container .dealer_cursor img{
     transition: transform .2s ease;
-    width: 25px;
+    width: 40px;
 }
 
 #wpsl-wrap #wpsl-result-list ul li:hover
@@ -5698,3 +5698,16 @@ footer .footer_main_continer  button.btn-default:hover
     background-color: #eee;
 }
 
+
+
+.upcoming-show-heading.range-heroimg {
+    font-family: Nobel,Arial,sans-serif;
+    background-color: #111;
+    margin-top: 170px;
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0;
+}
