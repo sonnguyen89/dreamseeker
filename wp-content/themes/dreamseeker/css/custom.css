@@ -5648,6 +5648,10 @@ footer .footer_main_continer  button.btn-default:hover
 {
     background-size: 1em 1px,100%;
 }
+#wpsl-search-wrap  #wpsl-stores
+{
+    overflow-y: scroll !important;
+}
 #wpsl-stores .wpsl-more-info-listings p
 {
     margin: 0 0 10px;
@@ -5666,7 +5670,14 @@ footer .footer_main_continer  button.btn-default:hover
     margin: 0 0 10px;
 }
 
+#wpsl-stores .arrow{
+    position: absolute;
+    transition: transform .2s ease;
+    width: 25px;
+}
+
 #wpsl-wrap #wpsl-result-list ul li:hover
 {
     background-color: #eee;
 }
+
