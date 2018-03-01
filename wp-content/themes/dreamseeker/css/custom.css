@@ -5594,9 +5594,11 @@ footer .footer_main_continer  button.btn-default:hover
 }
 
 
-.wpsl-input label, #wpsl-radius label, #wpsl-category label
+.wpsl-input label, #wpsl-radius label, #wpsl-category label,#wpsl-results label
 {
     width:auto !important;
+    text-transform: uppercase;
+    padding: 2px 5px;
 }
 
 #wpsl-search select, #wpsl-search-wrap select, .wpsl-direction-details
