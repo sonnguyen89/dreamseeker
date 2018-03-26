@@ -5652,7 +5652,7 @@ footer .footer_main_continer  button.btn-default:hover
 }
 #wpsl-stores
 {
-    /*cursor: none;*/
+    cursor: none;
     overflow-y: scroll !important;
 
 }
