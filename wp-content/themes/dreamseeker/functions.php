@@ -636,6 +636,10 @@ function custom_more_info_template()
                 $more_info_template .= "\t\t\t\t" . '<% if ( email ) { %>' . "\r\n";
                 $more_info_template .= "\t\t\t\t" . '<span><strong>' . esc_html( $wpsl->i18n->get_translation( 'email_label', __( 'Email', 'wpsl' ) ) ) . '</strong>: <%= email %></span>' . "\r\n";
                 $more_info_template .= "\t\t\t\t" . '<% } %>' . "\r\n";
+                $more_info_template .= "\t\t\t\t" . '<% if ( url ) { %>' . "\r\n";
+                $more_info_template .= "\t\t\t\t" . '<span><a href="<%= url %>"><strong>' . esc_html( $wpsl->i18n->get_translation( 'url_label', __( 'Url', 'wpsl' ) ) ) . '</strong>: <%= url %></a></span>' . "\r\n";
+                $more_info_template .= "\t\t\t\t" . '<% } %>' . "\r\n";
+
                 $more_info_template .= "\t\t\t\t" . '</p>' . "\r\n";
             }
 
@@ -654,6 +658,55 @@ function custom_more_info_template()
 
         return $more_info_template;
     }
+}
+
+add_filter('wpsl_store_header_template', 'custom_store_header_template');
+function custom_store_header_template( $location = 'info_window')
+{
+    global $wpsl_settings;
+
+    if ( $wpsl_settings['new_window'] ) {
+        $new_window = ' target="_blank"';
+    } else {
+        $new_window = '';
+    }
+
+    /*
+     * To keep the code readable in the HTML source we ( unfortunately ) need to adjust the
+     * amount of tabs in front of it based on the location were it is shown.
+     */
+    if ( $location == 'listing') {
+        $tab = "\t\t\t\t";
+    } else {
+        $tab = "\t\t\t";
+    }
+
+    if ( $wpsl_settings['permalinks'] ) {
+
+        /**
+         * It's possible the permalinks are enabled, but not included in the location data on
+         * pages where the [wpsl_map] shortcode is used.
+         *
+         * So we need to check for undefined, which isn't necessary in all other cases.
+         */
+        if ( $location == 'wpsl_map') {
+            $header_template = '<% if ( typeof permalink !== "undefined" ) { %>' . "\r\n";
+            $header_template .= $tab . '<strong><a' . $new_window . ' href="<%= permalink %>"><%= store %></a></strong>' . "\r\n";
+            $header_template .= $tab . '<% } else { %>' . "\r\n";
+            $header_template .= $tab . '<strong><%= store %></strong>' . "\r\n";
+            $header_template .= $tab . '<% } %>';
+        } else {
+            $header_template = '<strong><a' . $new_window . ' href="<%= permalink %>"><%= store %></a></strong>';
+        }
+    } else {
+        $header_template = '<% if ( wpslSettings.storeUrl == 1 && url ) { %>' . "\r\n";
+        $header_template .= $tab . '<strong><a' . $new_window . ' href="<%= url %>"><%= store %></a></strong>' . "\r\n";
+        $header_template .= $tab . '<% } else { %>' . "\r\n";
+        $header_template .= $tab . '<strong><%= store %></strong>' . "\r\n";
+        $header_template .= $tab . '<% } %>';
+    }
+
+    return  $header_template ;
 }
 
 
