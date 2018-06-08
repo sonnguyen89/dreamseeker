@@ -124,7 +124,16 @@ global $post;
             }
 
         )
+        var left_offset=  $('#navbar.main-navigation .main-navbar-content li:first-child').offset();
+        $('.hero-banner .banner-content').css({'left' : left_offset.left + 12});
+        $( window ).resize(function(){
+            if($(window).width() > 776 )
+            {
+                var left_offset=  $('#navbar.main-navigation .main-navbar-content li:first-child').offset();
+                $('.hero-banner .banner-content').css({'left' : left_offset.left + 12});
+            }
 
+        });
     });
 
 </script>

@@ -4990,9 +4990,8 @@ hr.section-divider{
     position: absolute;
     top: 0px;
     left: 0px;
-    padding-top: 8%;
+    padding-top: 10%;
     width: 100%;
-    padding-left: 21%;
 }
 @media only screen and (max-width: 991px)
 {
@@ -5038,7 +5037,11 @@ hr.section-divider{
 {
     .hero-banner h1
     {
-        font-size: 40px;
+        font-size: 3em;
+    }
+    .hero-banner h2
+    {
+        font-size: 2em;
     }
     .hero-banner h3
     {
