@@ -4545,6 +4545,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     height: auto;
     position: relative;
     padding: 0;
+    overflow: hidden;
 }
 @media only screen and (max-width: 868px)
 {
@@ -4564,6 +4565,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     font-family: Nobel,Arial,sans-serif;
     font-size:50px;
 }
+
 .hero-banner .banner-content a
 {
     background:none;
@@ -4578,9 +4580,38 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     background-repeat: no-repeat;
     background-position: 50% calc(100% - 11px),0 0;
 }
-
-
-
+.hero-banner .mobile-banner-content
+{
+    display: none;
+    color:#000;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding:10px 0;
+}
+.hero-banner .mobile-banner-content h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.hero-banner .mobile-banner-content h2
+{
+    font-weight: 400;margin-top: 10px;font-size:20px;
+}
+.hero-banner .mobile-banner-content a{
+    color:#000;
+    font-weight: 400;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+@media only screen and (max-width: 650px) {
+    .hero-banner .banner-content
+    {
+        display:none;
+    }
+    .hero-banner .mobile-banner-content
+    {
+        display: block;
+    }
+}
 @media only screen and (max-width: 560px)
 {
 
@@ -4599,7 +4630,6 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     }
 
 }
-
 
 .hero-banner .banner-content a:hover
 {
@@ -4934,14 +4964,10 @@ hr.section-divider{
     bottom: 15px;
     left: 25px;
 }
-@media only screen and (max-width: 450px)
+@media only screen and (max-width: 650px)
 {
-    .hero-banner .banner-list .owl-controls {
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        margin: 0 auto;
-        width: 100%;
+    .hero-banner .banner-list .owl-controls .owl-pagination {
+       display: none;
     }
 }
 .hero-banner .banner-list .owl-controls .owl-pagination .owl-page .owl-numbers
@@ -5659,7 +5685,7 @@ footer .footer_main_continer  button.btn-default:hover
     overflow-y: scroll !important;
 
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
 }
@@ -5667,7 +5693,7 @@ footer .footer_main_continer  button.btn-default:hover
     border-radius: 4px;
     background-color: rgba(0, 0, 0, .5);
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
+}*/
 #wpsl-stores .wpsl-more-info-listings p
 {
     margin: 0 0 10px;

@@ -150,6 +150,9 @@ global $post;
                                 <?php the_field('home_hero_banner_text', $hm_id); ?>
                             </div>
                             <img src="<?php the_field('home_hero_banner_image', $hm_id); ?>" attr="banner 1" />
+                            <div class="mobile-banner-content">
+                                <?php the_field('home_hero_banner_text', $hm_id); ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                     <?php if(get_field('home_hero_banner_image_2', $hm_id)): ?>
@@ -158,6 +161,9 @@ global $post;
                                 <?php the_field('home_hero_banner_text_2', $hm_id); ?>
                             </div>
                             <img src="<?php the_field('home_hero_banner_image_2', $hm_id); ?>" attr="banner 2" />
+                            <div class="mobile-banner-content">
+                                <?php the_field('home_hero_banner_text_2', $hm_id); ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                     <?php if(get_field('home_hero_banner_image_3', $hm_id)): ?>
@@ -166,6 +172,9 @@ global $post;
                                 <?php the_field('home_hero_banner_text_3', $hm_id); ?>
                             </div>
                             <img src="<?php the_field('home_hero_banner_image_3', $hm_id); ?>" attr="banner 3" />
+                            <div class="mobile-banner-content">
+                                <?php the_field('home_hero_banner_text_3', $hm_id); ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
