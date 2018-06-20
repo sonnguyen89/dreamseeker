@@ -4595,7 +4595,10 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 }
 .hero-banner .mobile-banner-content h2
 {
-    font-weight: 400;margin-top: 10px;font-size:20px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size:20px;
 }
 .hero-banner .mobile-banner-content a{
     color:#000;
