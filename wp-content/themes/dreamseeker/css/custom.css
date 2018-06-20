@@ -4586,11 +4586,12 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     color:#000;
     text-align: center;
     background-color: #f9f9f9;
-    padding:10px 0;
+    padding:15px 0;
 }
 .hero-banner .mobile-banner-content h1{
     font-size: 30px;
     font-weight: bold;
+    margin-top: 0px;
 }
 .hero-banner .mobile-banner-content h2
 {
