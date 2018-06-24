@@ -637,6 +637,31 @@ a.ftc{
 .hero-unit.product-img{
     overflow:hidden;
 }
+
+
+.hero-unit.product-img .product-img-caption {
+    color: #fff;
+    position: absolute;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    font-family: 'AvenirNextNormal', sans-serif;
+    text-align: left;
+    left: auto;
+    font-size: 18px;
+    right: auto;
+    top: 34%;
+    text-transform: uppercase;
+    max-width: 600px;
+}
+@media all and  (max-width: 400px){
+    .hero-unit.product-img .product-img-caption
+    {
+        left: 10px;
+        top:24%;
+    }
+
+}
+
 .all_dtl {
     bottom: 200px;
     position: absolute;
@@ -2535,6 +2560,12 @@ footer .second-section .container-fluid.footer_main_continer{
 .all_dtl{
     /*    bottom: 215px!important;*/
     float: right;
+}
+@media all and  (max-width: 400px){
+    .all_dtl{
+        left:10px;
+        right:auto;
+    }
 }
 .product-introtext{
     background:#fff;

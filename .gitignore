@@ -12,6 +12,7 @@
 # WordPress
 *.log
 .htaccess
+.DS_Store
 wp-config.php
 /projects/
 /wp-content/advanced-cache.php
@@ -24,3 +25,4 @@ wp-config.php
 /wp-content/wp-cache-config.php
 /wp-content/plugins/hello.php
 /wp-content/themes/dreamseeker/cache/
+/wp-content/w3tc-config/
