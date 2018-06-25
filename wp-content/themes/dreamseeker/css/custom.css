@@ -4517,7 +4517,17 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 .empty_field_header_specs{
     width:65%;
 }
-
+.panel-default>.panel-heading+.panel-collapse>.panel-body.one-layout
+{
+    padding-right: 34px;
+}
+@media(max-width:450px)
+{
+    .panel-default>.panel-heading+.panel-collapse>.panel-body.one-layout
+    {
+        padding-right: 0;
+    }
+}
 @media(max-width:650px)
 {
     .empty_field_header_specs
