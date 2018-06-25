@@ -4184,6 +4184,14 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     border-radius: 0;
     font-family: Nobel,Arial,sans-serif;
 }
+@media all and (max-width: 450px)
+{
+    .products-specs .panel-default .panel-collapse
+    {
+        padding: 15px;
+    }
+}
+
 .list-group, .list-group a{
     background:#404040;
 }
