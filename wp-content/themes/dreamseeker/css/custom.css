@@ -2276,7 +2276,7 @@ footer .firs-section .icon-ig:hover{
 @media (max-width: 450px)
 {
     .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
-        margin-left:10px!important;
+        margin-left:5px!important;
     }
 }
 
@@ -3337,9 +3337,6 @@ footer .second-section .container-fluid.footer_main_continer{
     }
     #wonderpluginslider-container-1{
         padding-top:67px!important;
-    }
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
-        margin-left:15px!important;
     }
     .searc {
         width: 93%;
@@ -5339,7 +5336,7 @@ footer .footer_main_continer  button.btn-default:hover
 @media (max-width: 766px){
     .second-navbar #navbar .product-list-toggle-label
     {
-        padding: 15px 45px;
+        padding: 15px 69px;
     }
 
 }
@@ -5363,22 +5360,12 @@ footer .footer_main_continer  button.btn-default:hover
     .second-navbar #navbar .product-list-toggle-label .arrow
     {
         width: 25px;
-        right: 44px !important;
+        right: 95px !important;
+        top: 12px;
         position: absolute;
         transition: transform .2s ease;
     }
 }
-@media (max-width: 1020px)
-{
-    .second-navbar #navbar .product-list-toggle-label .arrow
-    {
-        width: 25px;
-        right: 0px;
-        position: absolute;
-        transition: transform .2s ease;
-    }
-}
-
 
 @media (max-width: 1050px){
 
