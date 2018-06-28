@@ -5336,7 +5336,7 @@ footer .footer_main_continer  button.btn-default:hover
 @media (max-width: 766px){
     .second-navbar #navbar .product-list-toggle-label
     {
-        padding: 15px 69px;
+        padding: 15px 80px;
     }
 
 }
@@ -5360,7 +5360,7 @@ footer .footer_main_continer  button.btn-default:hover
     .second-navbar #navbar .product-list-toggle-label .arrow
     {
         width: 25px;
-        right: 95px !important;
+        right: 80px !important;
         top: 12px;
         position: absolute;
         transition: transform .2s ease;
