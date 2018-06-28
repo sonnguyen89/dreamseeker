@@ -2225,7 +2225,7 @@ footer .firs-section .icon-ig:hover{
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
     {
-        top: 170px;
+        top: 150px;
     }
 }@media(max-width:1260px)
 {
