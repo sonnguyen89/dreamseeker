@@ -26,3 +26,4 @@ wp-config.php
 /wp-content/plugins/hello.php
 /wp-content/themes/dreamseeker/cache/
 /wp-content/w3tc-config/
+/wp-content/plugins/akeebabackupwp-core/helpers/private/config.php
