@@ -5303,7 +5303,6 @@ footer .footer_main_continer  button.btn-default:hover
 {
     display: none;
     width:100%;
-    padding:0;
     float: none;
     margin-right: 0;
     margin-left: 0;
@@ -5315,7 +5314,8 @@ footer .footer_main_continer  button.btn-default:hover
     padding: 15px 45px;
     text-transform: uppercase;
     font-family: Nobel,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 @media (max-width: 1050px){
     .second-navbar #navbar .product-list-toggle-label
@@ -5422,7 +5422,7 @@ footer .footer_main_continer  button.btn-default:hover
 
 .navbar-second .navbar-nav > li > a {
     color: #fff;
-    padding: 15px 42px;
+    padding: 15px 80px;
     text-shadow: none;
     background: #111;
     font-family: Nobel,Arial,sans-serif;
