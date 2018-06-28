@@ -269,6 +269,9 @@
 
                 $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
 
+                $( window ).resize(function(){
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
+                });
 
                 var main_nav_width = $('#navbar.main-navigation > div').width();
 
@@ -298,8 +301,11 @@
                         $('.second-section .footer_main_continer .container').css('width',second_width);
                     }
 
-
                 });
+
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content a.product-find-more')
+
+
             });
         </script>
 

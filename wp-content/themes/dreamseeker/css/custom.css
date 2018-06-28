@@ -2235,15 +2235,6 @@ footer .firs-section .icon-ig:hover{
         top: 80px;
     }
 }
-
-@media(max-width:1160px)
-{
-    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
-    .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-occupant
-    {
-        top: 130px;
-    }
-}
 @media(max-width:800px)
 {
     .main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content .product-size,
