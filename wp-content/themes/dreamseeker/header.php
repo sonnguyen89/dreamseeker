@@ -265,14 +265,16 @@
                     });
                 }
 
-
-
-                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
-
+                //set the height of content of product menu equal to product image height
+                //wait until product image loaded completly then get the height for product menu and set it to the product menu content height
+                $('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').ready(function(){
+                        $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
+                    });
                 $( window ).resize(function(){
                     $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
                 });
 
+                //set the product menu width
                 var main_nav_width = $('#navbar.main-navigation > div').width();
 
                 if($(window).width() > 1053 )
