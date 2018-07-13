@@ -2574,7 +2574,7 @@ footer .second-section .container-fluid.footer_main_continer{
 .product-introtext
 {
     color: #202020;
-    background: #f9f9f9;
+    background: #ffffff;
 }
 .product-video p,.product-introtext.sin-prd.overview p{
     font-size: 20px;
@@ -5831,6 +5831,7 @@ footer .footer_main_continer  button.btn-default:hover
 {
     color:#111;
     display:none;
+    background: #f9f9f9;
 }
 @media screen and (max-width: 767px)
 {
