@@ -5865,12 +5865,14 @@ footer .footer_main_continer  button.btn-default:hover
     margin: 0 0 20px;
 
 }
+.mobile-banner-wrap.container .banner-content p.size_occu_panel span.price_wr,
 .mobile-banner-wrap.container .banner-content p.size_occu_panel span.size_wr,
 .mobile-banner-wrap.container .banner-content p.size_occu_panel span.occu_wr
 {
     float:none;
     display: inline-block;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .mobile-banner-wrap.container .banner-content .download-btn .btn-primary
