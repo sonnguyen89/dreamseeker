@@ -2571,8 +2571,10 @@ footer .second-section .container-fluid.footer_main_continer{
         right:auto;
     }
 }
-.product-introtext{
-    background:#fff;
+.product-introtext
+{
+    color: #202020;
+    background: #f9f9f9;
 }
 .product-video p,.product-introtext.sin-prd.overview p{
     font-size: 20px;
@@ -4363,10 +4365,18 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
     /*    margin-left: 1%;*/
     padding: 10px;
 }
-.ss_wrap_bhags{
+.ss_wrap_bhags
+{
     background: rgba(0, 0, 0, 0) url("../img/banner-grad-bg.png") repeat-x scroll left bottom;
     height: 100%;
     position: relative;
+}
+@media screen and (max-width:767px)
+{
+    .ss_wrap_bhags
+    {
+        display: none;
+    }
 }
 /* home page slider text */
 @media (max-width: 520px) {
@@ -5815,4 +5825,66 @@ footer .footer_main_continer  button.btn-default:hover
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0;
+}
+
+.mobile-banner-wrap.container
+{
+    color:#111;
+    display:none;
+}
+@media screen and (max-width: 767px)
+{
+    .mobile-banner-wrap.container
+    {
+        display: block;
+    }
+}
+.mobile-banner-wrap.container .banner-content h1
+{
+    margin-bottom: 5px;
+    margin-top: 30px;
+    color: #000;
+    text-shadow: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mobile-banner-wrap.container .banner-content p
+{
+    color: #000;
+    text-shadow: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mobile-banner-wrap.container .banner-content p.size_occu_panel
+{
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px;
+
+}
+.mobile-banner-wrap.container .banner-content p.size_occu_panel span.size_wr,
+.mobile-banner-wrap.container .banner-content p.size_occu_panel span.occu_wr
+{
+    float:none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mobile-banner-wrap.container .banner-content .download-btn .btn-primary
+{
+    display: block;
+    font-family: "Maven Pro", Helvetica, Arial, sans-serif;
+    background: #0c121c;
+    padding: 18px 3%;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.mobile-banner-wrap.container .banner-content .download-btn
+{
+    margin-bottom: 30px;
 }
