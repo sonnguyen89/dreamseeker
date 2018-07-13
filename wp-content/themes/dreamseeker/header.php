@@ -274,6 +274,10 @@
                     $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
                 });
 
+                $('.main-navigation .navbar-nav > li').hover(function(){
+                    $('.main-navigation .navbar-nav > li > div.menu-item-dropdown div.dropdown-content').css('height',$('.main-navigation .navbar-nav > li > div.menu-item-dropdown img.dropdown-image').height());
+                });
+
                 //set the product menu width
                 var main_nav_width = $('#navbar.main-navigation > div').width();
 
