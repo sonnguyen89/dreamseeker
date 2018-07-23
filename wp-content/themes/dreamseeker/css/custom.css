@@ -2576,9 +2576,10 @@ footer .second-section .container-fluid.footer_main_continer{
     color: #202020;
     background: #ffffff;
 }
-.product-video p,.product-introtext.sin-prd.overview p{
-    font-size: 20px;
-    font-family: "AvenirNextUltraLight",sans-serif;
+.product-video p,.product-introtext.sin-prd.overview p
+{
+    font-size: 18px;
+    font-family: "AvenirNextNormal",sans-serif;
 }
 #specifications{
     border-top:5px solid #fff;
@@ -3302,9 +3303,9 @@ footer .second-section .container-fluid.footer_main_continer{
         border:none;
     }
     #navbar li, #navbar  div, #navbar ul, #menu-menu-1.nav.navbar-nav.navbar-center li{
-        float: left;
-        width: 100%;
-        padding: 0px 15px;
+        float: left !important;
+        width: 100% !important;
+        background: #000;
     }
     #navbar .nav.navbar-nav.navbar-center li .sub-menu.dropdown-menu{
         border: none;
@@ -4187,7 +4188,7 @@ div.spec_cont_tab-tab div.spec_cont_tab-tab-content:not(.active){
 {
     .products-specs .panel-default .panel-collapse
     {
-        padding: 15px;
+        padding: 0;
     }
 }
 
@@ -5544,7 +5545,14 @@ footer .footer_main_continer  button.btn-default:hover
     color: #111;
     background-size: 1.5em 1px,100%;
 }
-
+@media all and (max-width: 767px)
+{
+    .product-brouchre .btn-primary
+    {
+        font-size: 1.2em;
+        letter-spacing: 0;
+    }
+}
 .range-heroimg.deal_heroimg
 {
     font-family: Nobel,Arial,sans-serif;
