@@ -5821,7 +5821,7 @@ footer .footer_main_continer  button.btn-default:hover
     background-color: #eee;
 }
 
-
+/** CUSTOMIZE UPCOMING SHOW PAGE **/
 
 .upcoming-show-heading.range-heroimg {
     font-family: Nobel,Arial,sans-serif;
@@ -5834,6 +5834,17 @@ footer .footer_main_continer  button.btn-default:hover
     background-size: 100%;
     background-position: 0;
 }
+.upcoming-results .results-items {
+    background: #ffffff;
+    border-right: 1px solid #717376;
+    overflow: hidden;
+    font-family: 'AvenirNextNormal', sans-serif;
+    transition: .1s;
+    color: #323132;
+    border-bottom: 1px solid #6f7072;
+    padding-bottom: 50px;
+}
+/** CUSTOMIZE MOBILE BANNER **/
 
 .mobile-banner-wrap.container
 {
@@ -5900,3 +5911,5 @@ footer .footer_main_continer  button.btn-default:hover
 {
     margin-bottom: 30px;
 }
+
+

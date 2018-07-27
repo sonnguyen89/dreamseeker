@@ -386,7 +386,7 @@ global $post;
 
 
             $('#mobile-navbar.mobile-navigation:not(.mobile-active)').stop().animate({
-                left:'-100%'
+                right:'100%'
             });
 
             $('#mobile-navbar.mobile-navigation.mobile-active').stop().animate({
