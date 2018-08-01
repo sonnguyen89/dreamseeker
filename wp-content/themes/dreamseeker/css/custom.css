@@ -1633,7 +1633,6 @@ footer .firs-section .icon-ig:hover{
 {
     background: #fff;
     border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
 }
 
 #navbar.main-navigation > div
@@ -5307,8 +5306,10 @@ footer .footer_main_continer  button.btn-default:hover
     text-align: center;
 }
 
-.second-navbar{
+.navbar.navbar-inverse.navbar-top.navbar-fixed-top.second-navbar{
     margin-top: 170px;
+    border-bottom: 1px solid #d9d9d9;
+
 }
 .second-navbar #navbar div.product-list-overview,
 .second-navbar #navbar ul.navbar-nav
@@ -5446,12 +5447,13 @@ footer .footer_main_continer  button.btn-default:hover
 
 .navbar-second .navbar-nav > li > a {
     color: #fff;
-    padding: 15px 60px 15px 45px;
+    padding: 15px 35px;
     text-shadow: none;
     background: #111;
     font-family: Nobel,Arial,sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
+    float: left;
 
 }
 .second-navbar.single_nav.navbar-inverse .navbar-second .navbar-nav > li.active > a,
@@ -5462,44 +5464,30 @@ footer .footer_main_continer  button.btn-default:hover
 {
     background: #fff;
     color: #111 !important;
-    border-bottom: 1px solid #d9d9d9;
+    border-top:none;
 }
-
 @media (max-width: 990px){
     .second-navbar #navbar ul.navbar-nav li a
     {
-        padding: 15px 60px 15px 20px;
-    }
-
-}
-@media (max-width: 830px){
-    .second-navbar #navbar ul.navbar-nav li a
-    {
-        padding: 15px 60px 15px 5px;
-    }
-
-}
-@media (max-width: 766px){
-    .second-navbar #navbar ul.navbar-nav li a
-    {
         padding: 15px 60px 15px 45px;
+        width: 100%;
     }
 
 }
 
 @media (max-width: 1050px) {
-    #navbar.navbar-second{
+    .second-navbar.single_nav.navbar-inverse #navbar.navbar-second{
         background: #f9f9f9;
         border-top: none;
         border-bottom: none;
-        margin-left: 0!important;
-        margin-right: 0!important;
-        margin-top: 0;
+        margin-top: 4px;
+        float: left;
+        height: 50px !important;
     }
 }
 
 @media (max-width: 766px) {
-    #navbar.navbar-second{
+    .second-navbar.single_nav.navbar-inverse #navbar.navbar-second{
         margin-top: 15px !important;
     }
 }
