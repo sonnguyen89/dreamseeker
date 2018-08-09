@@ -27,6 +27,11 @@
                         </div>
                         <button type="submit" class="btn btn-default send_ns">Submit</button>
                     </form>
+                    <div class="loading-progress">
+                        <div class="loading_btn"></div>
+                        <div class="loaded_btn"></div>
+                    </div>
+                    <div class="load_cont_mess"></div>
                 </div>
             </div>
         </div> 

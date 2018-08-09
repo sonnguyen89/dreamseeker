@@ -568,15 +568,6 @@ jQuery(document).ready(function($) {
 
 
 
-    //    jQuery('.sub-menu-range li a').click(function(){
-
-    //       var ttl =  jQuery(this).text();
-
-    //       jQuery('.range-heroimg h1').val(ttl);
-
-    //  });
-
-    //  
 
     var parentHeight = jQuery('.search_big').height();
 
@@ -658,7 +649,6 @@ jQuery(document).ready(function($) {
 
                     jQuery('.hide_load').hide();
 
-                //                    equalHeight(jQuery(".EqHeightDiv"));
 
                 } else {
 
@@ -671,180 +661,6 @@ jQuery(document).ready(function($) {
         });
 
     });
-
-    //    jQuery('.range-disoption.range_op .colicon.col4').click(function(e) {
-
-    //        e.preventDefault();
-
-    //        jQuery('#view_more_count').attr("data_count", "0");
-
-    //        var price_value = jQuery('.product_price').val();
-
-    //        var price_key = jQuery('#product_priceSelectBoxIt').attr('data_val');
-
-    //        var length_value = jQuery('.product_length').val();
-
-    //        var length_key = jQuery('#product_lengthSelectBoxIt').attr('data_val');
-
-    //        var dealer_value = jQuery('.product_dealer').val();
-
-    //        var dealer_key = jQuery('.product_dealer').attr('data_val');
-
-    //        var product_category = jQuery('.product_category').val();
-
-    ////      console.log(product_category);
-
-    //        jQuery('.range-heroimg h1').text(product_category);
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_price_4',
-
-    //                'price_value': price_value,
-
-    //                'price_key': price_key,
-
-    //                'length_value': length_value,
-
-    //                'length_key': length_key,
-
-    //                'dealer_value': dealer_value,
-
-    //                'dealer_key': dealer_key,
-
-    //                'product_category': product_category
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
-
-    //    jQuery('.range-disoption.range_op .colicon.col3').click(function(e) {
-
-    //        e.preventDefault();
-
-    //        jQuery('#view_more_count').attr("data_count", "0");
-
-    //        var price_value = jQuery('.product_price').val();
-
-    //        var price_key = jQuery('#product_priceSelectBoxIt').attr('data_val');
-
-    //        var length_value = jQuery('.product_length').val();
-
-    //        var length_key = jQuery('#product_lengthSelectBoxIt').attr('data_val');
-
-    //        var dealer_value = jQuery('.product_dealer').val();
-
-    //        var dealer_key = jQuery('.product_dealer').attr('data_val');
-
-    //        var product_category = jQuery('.product_category').val();
-
-    ////      console.log(product_category);
-
-    //        jQuery('.range-heroimg h1').text(product_category);
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_price_3',
-
-    //                'price_value': price_value,
-
-    //                'price_key': price_key,
-
-    //                'length_value': length_value,
-
-    //                'length_key': length_key,
-
-    //                'dealer_value': dealer_value,
-
-    //                'dealer_key': dealer_key,
-
-    //                'product_category': product_category
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                    jQuery('#view_more_count').attr("data_count", 0);
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
 
     jQuery('.fl_rng').removeClass('col-sm-8');
 
@@ -884,95 +700,7 @@ jQuery(document).ready(function($) {
 
         jQuery('.results-items').removeClass('min_hh');
 
-    //        jQuery('.results-items').addClass('EqHeightDiv');
-
-    //          equalHeight(jQuery(".EqHeightDiv"));
-
     });
-
-    //        jQuery('#view_more_count').attr("data_count", "0");
-
-    //        var price_value = jQuery('.product_price').val();
-
-    //        var price_key = jQuery('#product_priceSelectBoxIt').attr('data_val');
-
-    //        var length_value = jQuery('.product_length').val();
-
-    //        var length_key = jQuery('#product_lengthSelectBoxIt').attr('data_val');
-
-    //        var dealer_value = jQuery('.product_dealer').val();
-
-    //        var dealer_key = jQuery('.product_dealer').attr('data_val');
-
-    //        var product_category = jQuery('.product_category').val();
-
-    ////      console.log(product_category);
-
-    //        jQuery('.range-heroimg h1').text(product_category);
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_price_full',
-
-    //                'price_value': price_value,
-
-    //                'price_key': price_key,
-
-    //                'length_value': length_value,
-
-    //                'length_key': length_key,
-
-    //                'dealer_value': dealer_value,
-
-    //                'dealer_key': dealer_key,
-
-    //                'product_category': product_category
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                    jQuery('#view_more_count').attr("data_count", 0);
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
 
 
 
@@ -1360,208 +1088,6 @@ jQuery(document).ready(function($) {
 
     });
 
-
-
-    //    jQuery('.range-disoption.upcome_opt .colicon.col4').click(function() {
-
-    //        var product_count = 0;
-
-    //        var ustae_value = jQuery('.upcoming_sate').val();
-
-    //        var umoth_value = jQuery('.upcoming_months').val();
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_up_4',
-
-    //                'ustae_value': ustae_value,
-
-    //                'umoth_value': umoth_value,
-
-    //                'product_count': product_count
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    jQuery('#view_more_count').attr("data_count", 0);
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
-
-    //    jQuery('.range-disoption.upcome_opt .colicon.col3').click(function() {
-
-    //        var product_count = 0;
-
-    //        var ustae_value = jQuery('.upcoming_sate').val();
-
-    //        var umoth_value = jQuery('.upcoming_months').val();
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_up_3',
-
-    //                'ustae_value': ustae_value,
-
-    //                'umoth_value': umoth_value,
-
-    //                'product_count': product_count
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    jQuery('#view_more_count').attr("data_count", 0);
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
-
-
-
-    //    jQuery('.range-disoption.upcome_opt .colicon.col1').click(function() {
-
-    //        var product_count = 0;
-
-    //        var ustae_value = jQuery('.upcoming_sate').val();
-
-    //        var umoth_value = jQuery('.upcoming_months').val();
-
-    //        jQuery.ajax({
-
-    //            type: 'POST',
-
-    //            url: wpdrm.ajaxurl,
-
-    //            data: {
-
-    //                pgnonce: wpdrm.PGNonce,
-
-    //                'action': 'filter_up',
-
-    //                'ustae_value': ustae_value,
-
-    //                'umoth_value': umoth_value,
-
-    //                'product_count': product_count
-
-    //
-
-    //            },
-
-    //            beforeSend: function() {
-
-    //
-
-    //            },
-
-    //            success: function(responce) {
-
-    //                jQuery('.hide_load').show();
-
-    //                if (responce) {
-
-    //                    jQuery('.append_res').empty();
-
-    //                    jQuery('.append_res').append(responce);
-
-    //                    jQuery('.hide_load').hide();
-
-    //                    jQuery('#view_more_count').attr("data_count", 0);
-
-    //                    equalHeight(jQuery(".EqHeightDiv"));
-
-    //                } else {
-
-    //
-
-    //                }
-
-    //            }
-
-    //        });
-
-    //    });
-
-
-
-
-
-
-
     jQuery('.filter_view_more_upcmng').click(function(e) {
 
         e.preventDefault();
@@ -1595,10 +1121,6 @@ jQuery(document).ready(function($) {
                     'umoth_value': umoth_value,
 
                     'product_count': product_count
-
-
-
-
 
                 },
 
@@ -2156,35 +1678,52 @@ jQuery(document).ready(function($) {
 
                     beforeSend: function() {
 
-                        jQuery('.loading_btn').css('display', 'block')
+                        jQuery('.load_cont_mess').css('display', 'none');
 
-                        jQuery('.loaded_btn').css('display', 'none')
+                        jQuery('button.send_ns').css('display', 'none');
+
+                        jQuery('.loaded_btn').css('display', 'none');
+
+                        jQuery('.loading-progress').css('display', 'block');
+
+                        jQuery('.loading_btn').css('display', 'inline-block');
+
+
 
                     },
+                    error : function(responce)
+                    {
+                        jQuery('button.send_ns').css('display', 'block');
 
-                    success: function(responce) {
+                        jQuery('.loading-progress').css('display', 'none');
 
-                        jQuery('.loading_btn').css('display', 'none')
+                        jQuery('.loading_btn').css('display', 'none');
 
-                        jQuery('.loaded_btn').css('display', 'block')
+                        jQuery('.loaded_btn').css('display', 'none');
+                    },
+                    success: function(responce)
+                    {
 
-                        jQuery('.load_cont_btn').append('<div class="mail_msg">Email Sent Successfully!</div>')
+                        jQuery('button.send_ns').css('display', 'none');
+
+                        jQuery('.loading_btn').css('display', 'none');
+
+                        jQuery('.loaded_btn').css('display', 'inline-block');
+
+                        jQuery('.load_cont_mess').css('display', 'block');
+
+                        jQuery('.load_cont_mess').html('<div class="mail_msg">Email Sent Successfully!</div>');
 
                     }
-
                 });
 
             }
 
-            else {
+            else
+                {
+                jQuery('.load_cont_mess').css('display', 'block');
 
-                jQuery('.email1').addClass('error');
-
-                jQuery("html, body").animate({
-
-                    scrollTop: jQuery('.cont_frm').offset().top
-
-                }, 1000);
+                jQuery('.load_cont_mess').html('<div class="mail_msg">Please enter email correctly </div>');
 
             }
 

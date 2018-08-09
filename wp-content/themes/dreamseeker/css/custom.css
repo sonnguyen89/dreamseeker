@@ -757,19 +757,6 @@ a.ftc{
     background:#FDE2EE;
     border:1px solid #FB0804;
 }
-.load_cont_btn{
-    position:relative;
-}
-.loading_btn{
-    background:url('../img/sending.gif') no-repeat;
-    width:30px;
-    height:30px;
-    position:absolute;
-    bottom:-6px;
-    left:10px;
-    background-size:85%;
-    display:none;
-}
 #news_share .icon-share {
     background-color: #1d1d1f;
     background-image: url("../img/sprite.png");
@@ -814,41 +801,8 @@ a.ftc{
 .upload_imgs li{
     position:relative;
 }
-.loading_btn1 {
-    background: rgba(0, 0, 0, 0) url("../img/loader.gif") no-repeat scroll 0 0 / 85% auto;
-    display: block;
-    height: 30px;
-    position: absolute;
-    right: 8%;
-    /*top: 7px;*/
-    width: 30px;
-    display:none;
-    bottom: -10px;
-}
-.loaded_btn{
-    background:url('../img/mail_2.png') no-repeat;
-    width:30px;
-    height:30px;
-    position:absolute;
-    /*top:11px;*/
-    left:10px;
-    background-size:85%;
-    display:none;
-    bottom: -10px;
-}
-.mail_msg {
-    font-size: 13px;
-    left: 45px;
-    position: absolute;
-    bottom:-3px;
-}
 .contact-itm{
     margin-bottom:30px;
-}
-.load_cont_btn {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
 }
 .contact-left .load_cont_btn {
     bottom: 40px;
@@ -5901,3 +5855,41 @@ footer .footer_main_continer  button.btn-default:hover
 }
 
 
+/** CUSTOMIZE THE LOADING PROGRESS AT NEWSLETTER **/
+.loading-progress
+{
+    font-size: 18px;
+    font-family: Nobel,Arial,sans-serif;
+    color: #111;
+    background: #fff;
+    padding: 10px 25px;
+    width: 100%;
+    height:45px;
+    display:none;
+    text-align: center;
+}
+
+.loading-progress .loading_btn
+{
+    background: rgba(0, 0, 0, 0) url("../img/loader.gif") no-repeat scroll 0 0 / 85% auto;
+    height: 30px;
+    width: 30px;
+    display:none;
+}
+.loading-progress .loaded_btn{
+    background:url('../img/mail_2.png') no-repeat;
+    width:30px;
+    height:30px;
+    background-size:85%;
+    display:none;
+}
+.load_cont_mess{
+    position:relative;
+    display:none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.load_cont_mess .mail_msg {
+    font-size: 13px;
+}
