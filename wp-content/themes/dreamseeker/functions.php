@@ -378,7 +378,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 }
 
 
-function __search_by_title_only( $search, &$wp_query )
+function __search_by_title_only( $search, $wp_query )
 {
     global $wpdb;
     if(empty($search)) {
