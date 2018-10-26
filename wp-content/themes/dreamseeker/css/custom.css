@@ -5893,3 +5893,62 @@ footer .footer_main_continer  button.btn-default:hover
 .load_cont_mess .mail_msg {
     font-size: 13px;
 }
+
+
+/* CUSTOMIZE THE PRODUCT SKINS FEATURE AT PRODUCT PAGE*/
+.caravan-skins-layout {
+    background: #fff;
+    color: #111;
+    text-align: center;
+    padding: 30px 0 70px;
+}
+
+.caravan-skins-layout  h2 {
+    font-family: Nobel,Arial,sans-serif;
+    font-weight: 700;
+    color: #111;
+    background: #ffffff;
+    text-transform: uppercase;
+    width: auto;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 28% 30px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.caravan-skins-layout .skin-list
+{
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+}
+
+.caravan-skins-layout .skin-list img
+{
+    max-width:70%;
+    width:auto;
+    height: auto;
+}
+.caravan-skins-layout .skin-list h4 {
+    font-family: Nobel,Arial,sans-serif;
+    float: left;
+    padding: 10px 40px 0;
+    width: 100%;
+    font-size: 26px;
+}
+.caravan-skins-layout .skin-list p
+{
+    display: block;
+    width: 100%;
+}
+.caravan-skins-layout .skin-list ul,
+.caravan-skins-layout .skin-list li
+{
+    font-family: Nobel,Arial,sans-serif;
+    font-size: 15px;
+    list-style: none;
+    margin:0;padding:0;
+    text-align: center;
+}
