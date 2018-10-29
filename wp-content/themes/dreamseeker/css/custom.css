@@ -5955,18 +5955,59 @@ footer .footer_main_continer  button.btn-default:hover
 
 .caravan-skins-layout .skin-list .owl-controls
 {
-    margin: 0 0 40px;
+    margin: 0 0 60px;
+}
+.caravan-skins-layout .skin-list .owl-controls .owl-page span {
+    filter: Alpha(Opacity=80);
+    opacity: 0.8;
 }
 
 .caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers {
     height: auto;
     width: auto;
-    background: #111111;
-    padding: 15px 35px;
+    border: 1px solid #9a9997;
+    background: #fff;
+    padding: 4px 14px 0px;
     letter-spacing: 3px;
     font-size: 16px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
     text-transform: uppercase;
+    opacity: 1;
+}
+
+.caravan-skins-layout .skin-list .owl-controls .owl-page.active span.owl-numbers
+{
+    border: 3px solid #111;
+}
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers span.charcoal{
+    background-image: url("../img/charcoal.png");
+    width:50px;
+    height:50px;
+    border-radius: 0px;
+    display: inline-block;
+}
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers span.orange{
+    background: #d94100;
+    width:50px;
+    height:50px;
+    border-radius: 0px;
+    display: inline-block;
+}
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers span.green{
+    background: #65d100;
+    width:50px;
+    height:50px;
+    border-radius: 0px;
+    display: inline-block;
+}
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers span.chrome
+{
+    border: 1px solid #111;
+    background: #fff;
+    width:50px;
+    height:50px;
+    border-radius: 0px;
+    display: inline-block;
 }
