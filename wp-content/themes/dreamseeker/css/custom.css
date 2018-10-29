@@ -5912,7 +5912,7 @@ footer .footer_main_continer  button.btn-default:hover
     width: auto;
     height: 100px;
     line-height: 100px;
-    margin: 0 28% 30px;
+    margin: 0 28% 0;
     font-size: 22px;
     letter-spacing: 3px;
     text-align: center;
@@ -5951,4 +5951,22 @@ footer .footer_main_continer  button.btn-default:hover
     list-style: none;
     margin:0;padding:0;
     text-align: center;
+}
+
+.caravan-skins-layout .skin-list .owl-controls
+{
+    margin: 0 0 40px;
+}
+
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers {
+    height: auto;
+    width: auto;
+    background: #111111;
+    padding: 15px 35px;
+    letter-spacing: 3px;
+    font-size: 16px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    text-transform: uppercase;
 }
