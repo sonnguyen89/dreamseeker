@@ -4931,6 +4931,7 @@ footer .firs-section
     font-family: Nobel,Arial,sans-serif;
     padding-left: 15px;
     font-size: 13px;
+    list-style-image: url("../img/list-style-black.png");
 }
 .latest-news-home .news-items a{
     color: #111;

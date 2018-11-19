@@ -302,9 +302,15 @@ global $post;
                     <!--<h4><span class="col_3_hd_sc"><span class="icons-news ico-news-feed"></span><span class="tx_hd_wrp"><?php // echo $news_heading;      ?></span></span></h4>-->
                         <span class="icon_aa"><?php echo $news_heading; ?></span>
                         <ul class="hm_col_3_ul">
-                            <li><?php echo $news_one; ?></li>
-                            <li><?php echo $news_two; ?></li>
-                            <li><?php echo $news_three; ?></li>
+                            <?php if(!empty($news_one)): ?>
+                                <li><?php echo $news_one; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($news_two)): ?>
+                                <li><?php echo $news_two; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($news_three)): ?>
+                                <li><?php echo $news_three; ?></li>
+                            <?php endif; ?>
                         </ul>
                     </a>
                 </div>
@@ -312,9 +318,15 @@ global $post;
                     <a href="<?php echo get_permalink(cedo_get_option('cedo_us_id')); ?>">
                         <span class="icon_bb"><?php echo $upcoming_show_heading; ?></span>
                         <ul class="hm_col_3_ul">
-                            <li><?php echo $upcoming_show_one; ?></li>
-                            <li><?php echo $upcoming_show_two; ?></li>
-                            <li><?php echo $upcoming_show_three; ?></li>
+                            <?php if(!empty($upcoming_show_one)): ?>
+                                <li><?php echo $upcoming_show_one; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($upcoming_show_two)): ?>
+                                <li><?php echo $upcoming_show_two; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($upcoming_show_three)): ?>
+                                <li><?php echo $upcoming_show_three; ?></li>
+                            <?php endif; ?>
                         </ul>
                     </a>
                 </div>
@@ -322,9 +334,15 @@ global $post;
                     <a href="<?php echo get_permalink(cedo_get_option('cedo_md_id')); ?>">
                         <span class="icon_cc"><?php echo $media_heading; ?></span>
                         <ul class="hm_col_3_ul">
-                            <li><?php echo $media_news_one; ?></li>
-                            <li><?php echo $media_news_two;   ?></li>
-                            <li><?php  echo $media_news_three;   ?></li>
+                            <?php if(!empty($media_news_one)): ?>
+                                <li><?php echo $media_news_one; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($media_news_two)): ?>
+                                <li><?php echo $media_news_two; ?></li>
+                            <?php endif; ?>
+                            <?php if(!empty($media_news_three)): ?>
+                                <li><?php echo $media_news_three; ?></li>
+                            <?php endif; ?>
                         </ul>
                     </a>
                 </div>
