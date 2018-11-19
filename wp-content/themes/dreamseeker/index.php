@@ -303,6 +303,8 @@ global $post;
                         <span class="icon_aa"><?php echo $news_heading; ?></span>
                         <ul class="hm_col_3_ul">
                             <li><?php echo $news_one; ?></li>
+                            <li><?php echo $news_two; ?></li>
+                            <li><?php echo $news_three; ?></li>
                         </ul>
                     </a>
                 </div>
@@ -321,8 +323,8 @@ global $post;
                         <span class="icon_cc"><?php echo $media_heading; ?></span>
                         <ul class="hm_col_3_ul">
                             <li><?php echo $media_news_one; ?></li>
-                            <!--<li><?php // echo $media_news_two;   ?></li>-->
-                            <!--<li><?php // echo $media_news_three;   ?></li>-->
+                            <li><?php echo $media_news_two;   ?></li>
+                            <li><?php  echo $media_news_three;   ?></li>
                         </ul>
                     </a>
                 </div>
