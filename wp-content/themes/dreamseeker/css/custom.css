@@ -5795,7 +5795,7 @@ footer .footer_main_continer  button.btn-default:hover
     display:none;
     background: #f9f9f9;
 }
-@media screen and (max-width: 767px)
+@media screen and(max-width: 767px)
 {
     .mobile-banner-wrap.container
     {
@@ -5917,6 +5917,13 @@ footer .footer_main_continer  button.btn-default:hover
     font-size: 22px;
     letter-spacing: 3px;
     text-align: center;
+}
+@media all and (max-width: 650px)
+{
+    .caravan-skins-layout h2
+    {
+        margin: auto;
+    }
 }
 .caravan-skins-layout .skin-list
 {
