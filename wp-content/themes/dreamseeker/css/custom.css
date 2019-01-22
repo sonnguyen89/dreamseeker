@@ -6012,3 +6012,12 @@ footer .footer_main_continer  button.btn-default:hover
     border-radius: 0px;
     display: inline-block;
 }
+.caravan-skins-layout .skin-list .owl-controls .owl-page span.owl-numbers > span
+{
+    border: 1px solid #dbdadb;
+    background: #fff;
+    width:50px;
+    height:50px;
+    border-radius: 0px;
+    display: inline-block;
+}
