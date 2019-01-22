@@ -5149,9 +5149,9 @@ footer .footer_main_continer  button.btn-default:hover
     margin: 0 auto;
     text-align: center;
 }
-.logo-wrapper img{
+.logo-wrapper img
+{
     width: 150px;
-    padding-bottom: 16px;
 }
 .logo-wrapper .logo-img-content{
     display: inline-block;
@@ -5170,8 +5170,6 @@ footer .footer_main_continer  button.btn-default:hover
     color: #111;
     font-size: 18px;
     text-transform: uppercase;
-    font-weight: lighter;
-
     font-weight: 400;
     letter-spacing: 3px;
 }
